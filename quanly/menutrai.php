@@ -40,7 +40,7 @@
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="quanlysinhvien.php" class="list-group-item">Thông tin khác</a>
+						<a href="quanly_thongtin_khach.php" class="list-group-item">Thông tin khác</a>
 					</div>
 					<button class="dropdown-btn">Quản lý phòng
 					<i class="fa fa-caret-down"></i>
