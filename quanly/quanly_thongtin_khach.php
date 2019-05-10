@@ -350,7 +350,7 @@
 						<div class="modal-body" id="thongtinnv_xoa12">
 						</div>
 						<form method="post" id="From_xoa_khach_hang" data-confirm="Bạn có chắn muốn xóa thông tin này?">
-							<input type="" name="id_khach_hang_xoa_12" id="id_khach_hang_xoa_12" />
+							<input type="hidden" name="id_khach_hang_xoa_12" id="id_khach_hang_xoa_12" />
 							<div class="modal-footer">
 								<input type="submit" name="insert_xoa" id="insert_xoa" value="Xóa" class="btn btn-danger canhgiua" />
 								<button type="button" class="btn btn-primary" data-dismiss="modal">Trở lại</button>
