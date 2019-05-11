@@ -11,12 +11,12 @@ include 'conn.php';
 		<thead>
 			<tr>
 				<th >STT</th>
-				<th>MSSV</th>
-				<th style="width: 170px;">Tên Sinh viên</th>
+				<th>Mã nhân viên</th>
+				<th style="width: 170px;">Tên nhân viên</th>
 				<th>Ngày sinh</th>
 				<th>Giới tính</th>
-				<th >HKTT</th>
-				<th>Điện thoại
+				<th >Hộ khẩu thường trú</th>
+				<th>Điện thoại</th>
 				<th>Sửa</th>
 				<th>Chi tiết</th>
 				<th>Xóa</th>
