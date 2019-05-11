@@ -24,6 +24,14 @@
 		echo json_encode($row);
 		// echo "1";
 	}//end dữ liệu loại phòng
+	if (isset($_POST['id_gia_phong_sua'])) {// dữ liệu giá phòng
+		include 'conn.php';
+		$query = "SELECT * FROM giaphong WHERE giaphong.id='".$_POST["id_gia_phong_sua"]."'";
+		$result = mysqli_query($conn, $query);
+		$row = mysqli_fetch_array($result);
+		echo json_encode($row);
+		// echo "1";
+	}//end dữ liệu giá phòng
 ?>
 	
 

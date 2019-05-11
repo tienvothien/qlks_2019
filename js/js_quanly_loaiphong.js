@@ -55,7 +55,7 @@ $(document).ready(function () {
 						// alert(kql_update_loai_phong);
 						if (kql_update_loai_phong==6) {
 			       			alert('Tên Loại phòng đã tồn tạo');
-							document.getElementById("cmnd_loai_phong_sua_12").focus();
+							document.getElementById("ten_loai_phong_sua_12").focus();
 			       		}else if (kql_update_loai_phong==99) {
 							alert('Cập nhật thông tin Loại phòng mới thành công');
 							$('#modal_sua_loai_phong').modal('hide');
@@ -130,7 +130,7 @@ $(document).ready(function () {
 					success:function (kql_add_loai_phong) {
 						 if (kql_add_loai_phong==6) {
 		          			alert('Tên Loại phòng đã tồn tạo');
-							document.getElementById("cmnd_them_loai_phong").focus();
+							document.getElementById("ten_loai_phongthemmoi_12").focus();
 		          		}else if (kql_add_loai_phong==99) {
 								alert('Thêm Loại phòng mới thành công');
 								$('#form_themloai_phongmoi')[0].reset();

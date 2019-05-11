@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 11, 2019 lúc 04:18 AM
+-- Thời gian đã tạo: Th5 11, 2019 lúc 05:52 AM
 -- Phiên bản máy phục vụ: 10.1.29-MariaDB
 -- Phiên bản PHP: 7.2.0
 
@@ -47,7 +47,9 @@ CREATE TABLE `giaphong` (
 --
 
 INSERT INTO `giaphong` (`id`, `ma_gia_phong`, `ten_gia_phong`, `gia_phong_gio`, `gia_phong_ngay`, `id_loai_phong`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
-(1, 'GP100', 'Giá phòng ví dụ', 50000, 0, 1, '2019-05-14 00:43:00', 2, 0, NULL, NULL);
+(1, 'GP100', 'Giá phòng ví dụ', 50000, 0, 1, '2019-05-14 00:43:00', 2, 0, 2, '2019-05-11 10:06:13'),
+(2, 'GP101', 'Giá Phòng Đơn 5', 50000, 50000, 1, '2019-05-11 10:13:17', 2, 0, NULL, NULL),
+(3, 'GP102', 'Giá phòng đơn 1', 325555, 55444, 1, '2019-05-11 10:19:04', 2, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -12266,7 +12268,7 @@ ALTER TABLE `xa`
 -- AUTO_INCREMENT cho bảng `giaphong`
 --
 ALTER TABLE `giaphong`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `khachhang`

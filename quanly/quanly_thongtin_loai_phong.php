@@ -43,7 +43,7 @@
 					<div class="container-fluid">
 						<div class="row"><!-- nho doi ten class -->
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<div class="dulieu_loaiphong"><?php include './../dulieu/dulieu_gia_phong.php'; ?></div>
+							<div class="dulieu_loaiphong"><?php include './../dulieu/dulieu_loai_phong.php'; ?></div>
 						</div>
 						<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
 							<input type="button" class="btn btn-basic btn-block" name="them_loai_phong" value="Thêm mới" data-toggle="modal" data-target="#them_loai_phong1">
