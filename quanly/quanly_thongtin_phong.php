@@ -79,21 +79,12 @@
 					<div class="modal-body _1themtoanha">
 						<form action="" id="form_them1_phongmoi" name="form_them1_phongmoi" 	method="POST" role="form" class="_1themphong1 "  enctype="multipart/form-data" data-confirm="Bạn có chắn muốn cập nhật lại thông tin này?">
 							
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hoten_cb_sua ">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua ">
 								<label>Mã phòng</label>
-								<?php
-									$r=mysqli_fetch_array(mysqli_query($conn,"SELECT ma_1_phong FROM giaphong order by ma_1_phong DESC LIMIT 1"));
-									$ma1=$r['ma_1_phong'];
-									$matang1 =substr($ma1, 2, 5);
-									$maatang2 = $matang1+1;
-									$mnvmoi= 'GP'.$maatang2;
-								?>
-								<input style="width:50%" type="text" name="ma_1_phong_themmoi123" id="ma_1_phong_themmoi123" class="form-control chuinhoa " value="<?php echo $mnvmoi ;?>"  required="" placeholder="Nhập mã phòng"  readonly=""/>
+								
+								<input style="" type="number" name="ma_1_phong_themmoi123" id="ma_1_phong_themmoi123" class="form-control chuinhoa " value=""  required="" placeholder="Nhập mã phòng"  />
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
-								<label>Tên phòng</label>
-								<input  name="ten_1_phongthemmoi_12" id="ten_1_phongthemmoi_12" class="form-control chuinthuong" rows="1" required="" placeholder="Nhập phòng" >
-							</div>
+							
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
 								<label>Loại phòng</label>
 								<select  name="idloai_phong_1_phongthemmoi_12" id="idloai_phong_1_phongthemmoi_12" class="form-control chuinthuong" required="required">
@@ -108,19 +99,9 @@
 									 ?>
 									
 								</select>
+								<br>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
-								<label>Giá giờ (VNĐ)</label>
-								<input  type="text" name="1_phong_giothemmoi_12" id="1_phong_giothemmoi_12" class="form-control chuinthuong" min="50000" rows="1" required="" placeholder="Nhập phòng" onkeyup="this.value=FormatNumber(this.value);">
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
-								<label>Giá ngày (VNĐ)</label>
-								<input  type="text" name="1_phong_ngaythemmoi_12" id="1_phong_ngaythemmoi_12" class="form-control " min="50000" rows="1" required="" placeholder="Nhập phòng" onkeyup="this.value=FormatNumber(this.value);">
-							<br>
-							</div>
-					
 						</div>
-						
 						<!-- Modal footer -->
 						<div class="modal-footer " style="border: none;" >
 							<button  type="submit" class="btn btn-danger">Thêm mới</button>
@@ -157,25 +138,13 @@
 					</div>
 					<div class="modal-body">
 						<form action="" id="from_suathongtin_1_phong" name="from_suathongtin_1_phong" 	method="POST" role="form" class="_1themphong1 " enctype="multipart/form-data" data-confirm="Bạn có chắn muốn cập nhật lại thông tin này?">
-							<!-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
-								<label>Ảnh</label>
-								<input id="file_anh_sv_sua" type="file" accept="image/*" name="image_123" />
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua text-center">
-								<div id="message"></div>
-								<div id="image_preview_1_phong_sua123">
-									<img id="previewing_1_phong_sua123_load" class="img-responsive" style="width:100px;" rc="" />
-								</div>
-							</div> -->
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hoten_cb_sua ">
+							
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua ">
 								<label>Mã phòng</label>
 								
-								<input style="width:50%" type="text" name="ma_1_phong_sua_12" id="ma_1_phong_sua_12" class="form-control chuinhoa " value=""  required="" readonly="" placeholder="Nhập mã phòng"  />
+								<input style="" type="text" name="ma_1_phong_sua_12" id="ma_1_phong_sua_12" class="form-control chuinhoa " value=""  required=""  placeholder="Nhập mã phòng"  />
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
-								<label>Tên phòng</label>
-								<input  name="ten_1_phong_sua_12" id="ten_1_phong_sua_12" class="form-control chuinthuong" rows="1" required="" placeholder="Nhập phòng" >
-							</div>
+							
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
 								<label>Loại phòng</label>
 								<select  name="idloai_phong_1_phong_sua_12" id="idloai_phong_1_phong_sua_12" class="form-control chuinthuong" required="required">
@@ -190,16 +159,9 @@
 									 ?>
 									
 								</select>
+								<br>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
-								<label>Giá giờ (VNĐ)</label>
-								<input  type="text" name="1_phong_gio_sua_12" id="1_phong_gio_sua_12" class="form-control chuinthuong" min="50000" rows="1" required="" placeholder="Nhập phòng" onkeyup="this.value=FormatNumber(this.value);">
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
-								<label>Giá ngày (VNĐ)</label>
-								<input  type="text" name="1_phong_ngay_sua_12" id="1_phong_ngay_sua_12" class="form-control " min="50000" rows="1" required="" placeholder="Nhập phòng" onkeyup="this.value=FormatNumber(this.value);">
-							<br>
-							</div>
+							
 							<input type="hidden" name="id_1_phong_sua_12" id="id_1_phong_sua_12" />
 						</div>
 						<div class="modal-footer">

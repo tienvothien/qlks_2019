@@ -1,16 +1,16 @@
 var inputnumber = 'Giá trị nhập vào không phải là số';
-	function FormatNumber(str) {
+	function Format_cmnd(str) {
 		var strTemp = GetNumber(str);
 		if (strTemp.length <= 3)
 			return strTemp;
 		strResult = "";
 		for (var i = 0; i < strTemp.length; i++)
-			strTemp = strTemp.replace(",", "");
+			strTemp = strTemp.replace("-", "");
 		var m = strTemp.lastIndexOf(".");
 		if (m == -1) {
 			for (var i = strTemp.length; i >= 0; i--) {
 				if (strResult.length > 0 && (strTemp.length - i - 1) % 3 == 0)
-					strResult = "," + strResult;
+					strResult = "-" + strResult;
 				strResult = strTemp.substring(i, i + 1) + strResult;
 			}
 		} else {
@@ -21,7 +21,7 @@ var inputnumber = 'Giá trị nhập vào không phải là số';
 			for (var i = strphannguyen.length; i >= 0; i--) {
 
 				if (strResult.length > 0 && tam == 4) {
-					strResult = "," + strResult;
+					strResult = "-" + strResult;
 					tam = 1;
 				}
 
@@ -36,7 +36,7 @@ var inputnumber = 'Giá trị nhập vào không phải là số';
 		var count = 0;
 		for (var i = 0; i < str.length; i++) {
 			var temp = str.substring(i, i + 1);
-			if (!(temp == "," || temp == "." || (temp >= 0 && temp <= 9))) {
+			if (!(temp == "-" || temp == "." || (temp >= 0 && temp <= 9))) {
 				alert(inputnumber);
 				return str.substring(0, i);
 			}
@@ -58,7 +58,7 @@ var inputnumber = 'Giá trị nhập vào không phải là số';
 				alert(inputnumber);
 				return str.substring(0, i);
 			}
-			if (temp == ",") {
+			if (temp == "-") {
 				return str.substring(0, i);
 			}
 		}

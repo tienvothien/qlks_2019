@@ -1,7 +1,7 @@
 <?php
+if (isset($_POST["id_chitiet1_phong"])) {
 include 'conn.php';
-
-	$selecet_phong = mysqli_query($conn, "SELECT * FROM phong WHERE phong.xoa=0  order by phong.ma_phong");
+	$selecet_phong = mysqli_query($conn, "SELECT * FROM phong WHERE phong.xoa=0 and phong.id='$_POST[id_chitiet1_phong]'  order by phong.ma_phong");
 	if (!mysqli_num_rows($selecet_phong)) {
 		echo "<div style='text-align: center;'> Chưa có dữ liệu</div>";
 	} else {
@@ -15,9 +15,7 @@ include 'conn.php';
 				<th class='canhgiua'>Loại phòng</th>
 				<th class='canhgiua'>Giá Giờ <br> (VNĐ)</th>
 				<th class='canhgiua'>Giá ngày <br> (VNĐ)</th>
-				<th class='canhgiua'>Sửa</th>
-				<th class='canhgiua'>Chi tiết</th>
-				<th class='canhgiua'>Xóa</th>
+				
 			</tr>
 		</thead>
 		<tbody>
@@ -37,9 +35,7 @@ include 'conn.php';
 				<td class='chuinhoa canhgiua'>". number_format ($r["gia_phong_ngay"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 
 				";?>
-				<td class="canhgiua"><input type="button" name="edit" value="Sửa" id="<?php echo $row_phong['id']; ?>" class="btn btn-success btn-xs id_sua_phong" /></td>
-				<td class="canhgiua"><input type="button" name="view" value="Chi tiết" id="<?php echo $row_phong['id']; ?>" class="btn btn-warning btn-xs view_chitietphong" /></td>
-				<td class="canhgiua"><input type="button" name="delete" value="Xóa" id="<?php echo $row_phong['id']; ?>" class="btn btn-info btn-danger btn-xs xoa_phong" /></td>
+				
 				<?php echo "
 			</tr>
 			";
@@ -50,5 +46,6 @@ include 'conn.php';
 	</table>
 
 <?php
+}
 }
 ?>

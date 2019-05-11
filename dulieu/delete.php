@@ -44,5 +44,16 @@
 		}
 
 	}// end xóa giá phòng
+	if (isset($_POST['id_xoa_1_phong123'])) { // xóa phòng
+		include 'conn.php';
+		$id_xoa_1_phong123=$_POST['id_xoa_1_phong123'];
+		$delet_gia_phong="UPDATE phong SET phong.xoa=1, phong.ngayxoa='".date("Y/m/d h:i:s")."', phong.id_nguoixoa='$_SESSION[idnv]' WHERE phong.id='$id_xoa_1_phong123'";
+		if (mysqli_query($conn,$delet_gia_phong)) {
+			echo "99";
+		}else{
+			echo "100";
+		}
+
+	}// end xóa phòng
 
  ?>
