@@ -208,7 +208,7 @@ $(document).ready(function () {
 					cache: false,
 					processData:false,
 					success:function (kql_update_nhan_vien) {
-						alert(kql_update_nhan_vien);
+						// alert(kql_update_nhan_vien);
 						if (kql_update_nhan_vien==6) {
 			       			alert('Số CMND nhân viên đã tồn tạo');
 							document.getElementById("cmnd_nhan_vien_sua_12").focus();
@@ -219,7 +219,8 @@ $(document).ready(function () {
 							alert('Cập nhật thông tin nhân viên mới thành công');
 							$('#modal_sua_nhan_vien').modal('hide');
 							$('#from_suathongtin_nhan_vien')[0].reset();
-							$('#dulieunhan_vien').load("./../dulieu/dulieunhan_vien.php");
+							// $('#dulieunhan_vien').load("./../dulieu/dulieunhan_vien.php");
+							location.reload();
 						}else if (kql_update_nhan_vien==88) {
 							alert('Bạn phải chọn file ảnh');
 						}else{

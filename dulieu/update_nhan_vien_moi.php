@@ -33,7 +33,7 @@ if (isset($_POST['id_nhan_vien_sua_12'])) {
 			if (mysqli_num_rows($kiemtra_sdt_sv) && $so_dt_nhan_vien_sua_12!='') {
 				echo "2";// sđt đã tồn tại
 			}else{
-				$insert_nhan_vien ="UPDATE nhanvien SET nhanvien.ho_nhan_vien='$ho_nhan_vien_sua_12', nhanvien.ten_nhan_vien='$ten_nhan_vien_sua_12', nhanvien.gioi_tinh='$gioitinh_nhan_vien_sua_12', nhanvien.ngay_sinh='$ngaysinh_nhan_vien_sua_12', nhanvien.que_quan='$quequan_nhan_vien_sua_12', nhanvien.cmnd='$cmnd_nhan_vien_sua_12', nhanvien.ngay_cap='$ngay_capcnnd_nhan_vien_sua_12', nhanvien.noicap='$noicap_nhan_vien_sua_12', nhanvien.so_dien_thoai='$so_dt_nhan_vien_sua_12', nhanvien.matinh='$tinh_nhan_vien_sua_12', nhanvien.mahuyen='$huyen_nhan_vien_sua_12', nhanvien.maxa='$xa_nhan_vien_sua_12', nhanvien.sonha='$sonha_nhan_vien_sua_12' WHERE nhanvien.id='$id_nhan_vien_sua_12'";
+				$insert_nhan_vien ="UPDATE nhanvien SET nhanvien.anhcanhan='$hinhanhthem', nhanvien.ho_nhan_vien='$ho_nhan_vien_sua_12', nhanvien.ten_nhan_vien='$ten_nhan_vien_sua_12', nhanvien.gioi_tinh='$gioitinh_nhan_vien_sua_12', nhanvien.ngay_sinh='$ngaysinh_nhan_vien_sua_12', nhanvien.que_quan='$quequan_nhan_vien_sua_12', nhanvien.cmnd='$cmnd_nhan_vien_sua_12', nhanvien.ngay_cap='$ngay_capcnnd_nhan_vien_sua_12', nhanvien.noicap='$noicap_nhan_vien_sua_12', nhanvien.so_dien_thoai='$so_dt_nhan_vien_sua_12', nhanvien.matinh='$tinh_nhan_vien_sua_12', nhanvien.mahuyen='$huyen_nhan_vien_sua_12', nhanvien.maxa='$xa_nhan_vien_sua_12', nhanvien.sonha='$sonha_nhan_vien_sua_12' WHERE nhanvien.id='$id_nhan_vien_sua_12'";
 				if (mysqli_query($conn, $insert_nhan_vien)) {
 					move_uploaded_file($_FILES["image_123"]["tmp_name"], $target_file);
 					// thêm tài khoản vào

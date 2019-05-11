@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 10, 2019 lúc 03:10 PM
+-- Thời gian đã tạo: Th5 11, 2019 lúc 06:31 AM
 -- Phiên bản máy phục vụ: 10.1.29-MariaDB
 -- Phiên bản PHP: 7.2.0
 
@@ -21,6 +21,36 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `qlks_giao`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `giaphong`
+--
+
+CREATE TABLE `giaphong` (
+  `id` int(11) NOT NULL,
+  `ma_gia_phong` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `ten_gia_phong` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
+  `gia_phong_gio` int(11) NOT NULL,
+  `gia_phong_ngay` int(11) NOT NULL,
+  `id_loai_phong` int(11) NOT NULL,
+  `ngaythem` datetime NOT NULL,
+  `id_nguoithem` int(11) NOT NULL,
+  `xoa` int(11) DEFAULT '0',
+  `id_nguoixoa` int(11) DEFAULT NULL,
+  `ngayxoa` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `giaphong`
+--
+
+INSERT INTO `giaphong` (`id`, `ma_gia_phong`, `ten_gia_phong`, `gia_phong_gio`, `gia_phong_ngay`, `id_loai_phong`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
+(1, 'GP100', 'Giá phòng ví dụ', 50000, 0, 1, '2019-05-14 00:43:00', 2, 0, 2, '2019-05-11 10:06:13'),
+(2, 'GP101', 'Giá Phòng Đơn 5', 50000, 50000, 1, '2019-05-11 10:13:17', 2, 0, NULL, NULL),
+(3, 'GP102', 'Giá phòng đơn 1', 325555, 55444, 1, '2019-05-11 10:19:04', 2, 0, NULL, NULL),
+(4, 'GP103', 'Giá phòng VIP', 200000, 250000, 9, '2019-05-11 11:26:03', 2, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -757,6 +787,78 @@ INSERT INTO `huyen` (`mahuyen`, `tenhuyen`, `caphuyen`, `matinh`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `khachhang`
+--
+
+CREATE TABLE `khachhang` (
+  `id` int(11) NOT NULL,
+  `ma_khach_hang` int(11) NOT NULL,
+  `ten_khach_hang` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
+  `ho_khach_hang` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
+  `gioi_tinh` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_sinh` date NOT NULL,
+  `que_quan` int(11) NOT NULL,
+  `cmnd` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_cap` date NOT NULL,
+  `noicap` int(11) NOT NULL,
+  `so_dien_thoai` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `matinh` int(11) NOT NULL,
+  `mahuyen` int(11) NOT NULL,
+  `maxa` int(11) NOT NULL,
+  `sonha` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
+  `ngaythem` datetime NOT NULL,
+  `id_nguoithem` int(11) NOT NULL,
+  `xoa` int(11) DEFAULT '0',
+  `id_nguoixoa` int(11) DEFAULT NULL,
+  `ngayxoa` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `khachhang`
+--
+
+INSERT INTO `khachhang` (`id`, `ma_khach_hang`, `ten_khach_hang`, `ho_khach_hang`, `gioi_tinh`, `ngay_sinh`, `que_quan`, `cmnd`, `ngay_cap`, `noicap`, `so_dien_thoai`, `matinh`, `mahuyen`, `maxa`, `sonha`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
+(1, 1900000001, 'Võ Thiện', 'Tiên', 'Nam', '1992-03-08', 91, '123456789', '2019-05-10', 91, '0568837004', 91, 909, 31021, 'Tổ 3', '2019-05-31 00:00:00', 2, 0, NULL, NULL),
+(2, 1900000002, 'một', 'Khách hành', 'Nam', '2019-12-31', 89, '123456780', '2019-12-31', 89, '0987654321', 89, 886, 30337, 'Tổ 1', '2019-05-10 21:12:31', 2, 0, 2, '2019-05-10 09:35:15'),
+(7, 1900000003, 'hai', 'Khách hành', 'Nam', '2019-12-31', 89, '987654321', '2019-12-31', 89, '', 77, 748, 26572, 'Tổ 1', '2019-05-10 21:15:25', 2, 0, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `loaiphong`
+--
+
+CREATE TABLE `loaiphong` (
+  `id` int(11) NOT NULL,
+  `ma_loai_phong` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `ten_loai_phong` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
+  `nguoi_o` int(11) NOT NULL,
+  `dien_tich` int(11) NOT NULL,
+  `ngaythem` datetime NOT NULL,
+  `id_nguoithem` int(11) NOT NULL,
+  `xoa` int(11) DEFAULT '0',
+  `id_nguoixoa` int(11) DEFAULT NULL,
+  `ngayxoa` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `loaiphong`
+--
+
+INSERT INTO `loaiphong` (`id`, `ma_loai_phong`, `ten_loai_phong`, `nguoi_o`, `dien_tich`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
+(1, 'LP100', 'Loại phòng ví dụ', 2, 34, '2019-05-16 00:00:00', 2, 1, 2, '2019-05-11 11:06:01'),
+(2, 'LP101', 'Loại Phòng Ví Dụ 1', 12, 20, '2019-05-11 08:23:25', 2, 1, 2, '2019-05-11 11:06:06'),
+(3, 'LP102', 'Loại Phòng Ví Dụ 4', 12, 213, '2019-05-11 08:25:53', 2, 1, 2, '2019-05-11 11:06:11'),
+(4, 'LP103', 'Loại Phòng Ví Dụ 3', 2, 21, '2019-05-11 08:26:22', 2, 1, 2, '2019-05-11 08:29:56'),
+(5, 'LP104', 'Phòng đơn Quạt ', 2, 50, '2019-05-11 11:04:02', 2, 0, NULL, NULL),
+(6, 'LP105', 'Phòng quạt đôi', 4, 80, '2019-05-11 11:04:19', 2, 0, NULL, NULL),
+(7, 'LP106', 'phòng đơn máy lạnh', 2, 50, '2019-05-11 11:04:37', 2, 0, NULL, NULL),
+(8, 'LP107', 'phòng đôi máy lạnh', 4, 80, '2019-05-11 11:04:58', 2, 0, NULL, NULL),
+(9, 'LP108', 'phòng VIP 1', 2, 100, '2019-05-11 11:05:22', 2, 0, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `nhanvien`
 --
 
@@ -790,8 +892,33 @@ CREATE TABLE `nhanvien` (
 
 INSERT INTO `nhanvien` (`id`, `anhcanhan`, `ma_nhan_vien`, `ten_nhan_vien`, `ho_nhan_vien`, `gioi_tinh`, `ngay_sinh`, `que_quan`, `cmnd`, `ngay_cap`, `noicap`, `so_dien_thoai`, `matinh`, `mahuyen`, `maxa`, `sonha`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
 (2, 'tải xuống (3).jpg', 'admin', 'Giao', 'Trần thị quỳnh', 'Nữ', '1997-11-03', 0, '098765432', '0000-00-00', 0, '0568837004', 91, 909, 31021, 'Tổ 1', '2019-05-10 00:00:00', 2, 0, NULL, NULL),
-(19, 'tải xuống (3).jpg', 'NV105', 'B', 'Trần văn', 'Nữ', '2019-12-31', 89, '098765466', '2019-12-31', 89, '0987654432', 89, 886, 30337, 'Tô 1', '2019-05-10 16:23:19', 2, 0, 2019, '0000-00-00 00:00:00'),
-(20, 'tải xuống (3).jpg', 'NV106', 'một', 'Nhân viên', 'Nam', '2019-12-31', 89, '098765430', '2019-12-31', 89, '0987654321', 89, 886, 30337, 'tổi1', '2019-05-10 16:25:56', 2, 0, 2019, '0000-00-00 00:00:00');
+(19, 'tải xuống (1).jpg', 'NV105', 'Baifi', 'Trần văn', 'Nữ', '2019-12-31', 89, '098765466', '2019-12-31', 89, '0987654432', 89, 886, 30337, 'Tô 1', '2019-05-10 16:23:19', 2, 0, 2, '0000-00-00 00:00:00'),
+(20, 'tải xuống (3).jpg', 'NV106', 'một', 'Nhân viên', 'Nam', '2019-12-31', 89, '098765430', '2019-12-31', 89, '0987654321', 89, 886, 30337, 'tổi1', '2019-05-10 16:25:56', 2, 0, 2, '0000-00-00 00:00:00'),
+(21, 'tải xuống (3).jpg', 'NV107', 'hay', 'nhân viên', 'Nam', '2021-12-31', 89, '009876543', '2020-12-31', 89, '', 89, 886, 30337, 'tổi1', '2019-05-10 21:16:49', 2, 1, 2, '2019-05-11 11:00:19');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `phong`
+--
+
+CREATE TABLE `phong` (
+  `id` int(11) NOT NULL,
+  `ma_phong` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `id_loai_phong` int(11) NOT NULL,
+  `ngaythem` datetime NOT NULL,
+  `id_nguoithem` int(11) NOT NULL,
+  `xoa` int(11) DEFAULT '0',
+  `id_nguoixoa` int(11) DEFAULT NULL,
+  `ngayxoa` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `phong`
+--
+
+INSERT INTO `phong` (`id`, `ma_phong`, `id_loai_phong`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
+(1, '101', 9, '2019-05-04 00:00:00', 2, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -817,7 +944,8 @@ CREATE TABLE `taikhoan` (
 INSERT INTO `taikhoan` (`id`, `tendangnhap`, `matkhau`, `ngaythem`, `id_nguoithem`, `xoa`, `ngayxoa`, `id_nguoixoa`) VALUES
 (1, 'admin', '579646aad11fae4dd295812fb4526245', '2019-05-10 00:00:00', 2, 0, NULL, NULL),
 (2, 'NV105', 'ad14c4547a14808c473f8a7a8237b121', '2019-05-10 16:23:19', 2, 0, NULL, NULL),
-(3, 'NV106', '09973a757ebabe2039c6a9a37a7e853e', '2019-05-10 16:25:56', 2, 0, NULL, NULL);
+(3, 'NV106', '09973a757ebabe2039c6a9a37a7e853e', '2019-05-10 16:25:56', 2, 0, NULL, NULL),
+(4, 'NV107', 'f3479af23a905d0b79f2600208ea11a9', '2019-05-10 21:16:49', 2, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -12094,11 +12222,42 @@ INSERT INTO `xa` (`maxa`, `tenxa`, `capxa`, `mahuyen`, `matinh`) VALUES
 --
 
 --
+-- Chỉ mục cho bảng `giaphong`
+--
+ALTER TABLE `giaphong`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `ma_nhan_vien` (`ma_gia_phong`),
+  ADD KEY `id_nguoithem` (`id_nguoithem`),
+  ADD KEY `id_nguoixoa` (`id_nguoixoa`),
+  ADD KEY `id_loai_phong` (`id_loai_phong`);
+
+--
 -- Chỉ mục cho bảng `huyen`
 --
 ALTER TABLE `huyen`
   ADD PRIMARY KEY (`mahuyen`),
   ADD KEY `matinh` (`matinh`);
+
+--
+-- Chỉ mục cho bảng `khachhang`
+--
+ALTER TABLE `khachhang`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `ma_nhan_vien` (`ma_khach_hang`),
+  ADD KEY `matinh` (`matinh`),
+  ADD KEY `mahuyen` (`mahuyen`),
+  ADD KEY `maxa` (`maxa`),
+  ADD KEY `id_nguoithem` (`id_nguoithem`),
+  ADD KEY `id_nguoixoa` (`id_nguoixoa`);
+
+--
+-- Chỉ mục cho bảng `loaiphong`
+--
+ALTER TABLE `loaiphong`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `ma_nhan_vien` (`ma_loai_phong`),
+  ADD KEY `id_nguoithem` (`id_nguoithem`),
+  ADD KEY `id_nguoixoa` (`id_nguoixoa`);
 
 --
 -- Chỉ mục cho bảng `nhanvien`
@@ -12108,7 +12267,19 @@ ALTER TABLE `nhanvien`
   ADD UNIQUE KEY `ma_nhan_vien` (`ma_nhan_vien`),
   ADD KEY `matinh` (`matinh`),
   ADD KEY `mahuyen` (`mahuyen`),
-  ADD KEY `maxa` (`maxa`);
+  ADD KEY `maxa` (`maxa`),
+  ADD KEY `id_nguoithem` (`id_nguoithem`),
+  ADD KEY `id_nguoixoa` (`id_nguoixoa`);
+
+--
+-- Chỉ mục cho bảng `phong`
+--
+ALTER TABLE `phong`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `ma_nhan_vien` (`ma_phong`),
+  ADD KEY `id_nguoithem` (`id_nguoithem`),
+  ADD KEY `id_nguoixoa` (`id_nguoixoa`),
+  ADD KEY `id_loai_phong` (`id_loai_phong`);
 
 --
 -- Chỉ mục cho bảng `taikhoan`
@@ -12137,20 +12308,52 @@ ALTER TABLE `xa`
 --
 
 --
+-- AUTO_INCREMENT cho bảng `giaphong`
+--
+ALTER TABLE `giaphong`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT cho bảng `khachhang`
+--
+ALTER TABLE `khachhang`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT cho bảng `loaiphong`
+--
+ALTER TABLE `loaiphong`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT cho bảng `nhanvien`
 --
 ALTER TABLE `nhanvien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT cho bảng `phong`
+--
+ALTER TABLE `phong`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
 --
+
+--
+-- Các ràng buộc cho bảng `giaphong`
+--
+ALTER TABLE `giaphong`
+  ADD CONSTRAINT `giaphong_ibfk_1` FOREIGN KEY (`id_nguoithem`) REFERENCES `nhanvien` (`id`),
+  ADD CONSTRAINT `giaphong_ibfk_2` FOREIGN KEY (`id_loai_phong`) REFERENCES `loaiphong` (`id`),
+  ADD CONSTRAINT `giaphong_ibfk_3` FOREIGN KEY (`id_nguoixoa`) REFERENCES `nhanvien` (`id`);
 
 --
 -- Các ràng buộc cho bảng `huyen`
@@ -12159,12 +12362,31 @@ ALTER TABLE `huyen`
   ADD CONSTRAINT `huyen_ibfk_1` FOREIGN KEY (`matinh`) REFERENCES `tinh` (`matinh`);
 
 --
+-- Các ràng buộc cho bảng `khachhang`
+--
+ALTER TABLE `khachhang`
+  ADD CONSTRAINT `khachhang_ibfk_1` FOREIGN KEY (`id_nguoithem`) REFERENCES `nhanvien` (`id`),
+  ADD CONSTRAINT `khachhang_ibfk_2` FOREIGN KEY (`id_nguoixoa`) REFERENCES `nhanvien` (`id`),
+  ADD CONSTRAINT `khachhang_ibfk_3` FOREIGN KEY (`matinh`) REFERENCES `tinh` (`matinh`),
+  ADD CONSTRAINT `khachhang_ibfk_4` FOREIGN KEY (`mahuyen`) REFERENCES `huyen` (`mahuyen`),
+  ADD CONSTRAINT `khachhang_ibfk_5` FOREIGN KEY (`maxa`) REFERENCES `xa` (`maxa`);
+
+--
+-- Các ràng buộc cho bảng `loaiphong`
+--
+ALTER TABLE `loaiphong`
+  ADD CONSTRAINT `loaiphong_ibfk_1` FOREIGN KEY (`id_nguoithem`) REFERENCES `nhanvien` (`id`),
+  ADD CONSTRAINT `loaiphong_ibfk_2` FOREIGN KEY (`id_nguoixoa`) REFERENCES `nhanvien` (`id`);
+
+--
 -- Các ràng buộc cho bảng `nhanvien`
 --
 ALTER TABLE `nhanvien`
   ADD CONSTRAINT `nhanvien_ibfk_1` FOREIGN KEY (`matinh`) REFERENCES `tinh` (`matinh`),
   ADD CONSTRAINT `nhanvien_ibfk_2` FOREIGN KEY (`mahuyen`) REFERENCES `huyen` (`mahuyen`),
-  ADD CONSTRAINT `nhanvien_ibfk_3` FOREIGN KEY (`maxa`) REFERENCES `xa` (`maxa`);
+  ADD CONSTRAINT `nhanvien_ibfk_3` FOREIGN KEY (`maxa`) REFERENCES `xa` (`maxa`),
+  ADD CONSTRAINT `nhanvien_ibfk_4` FOREIGN KEY (`id_nguoithem`) REFERENCES `nhanvien` (`id`),
+  ADD CONSTRAINT `nhanvien_ibfk_5` FOREIGN KEY (`id_nguoixoa`) REFERENCES `nhanvien` (`id`);
 
 --
 -- Các ràng buộc cho bảng `taikhoan`

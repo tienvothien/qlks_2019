@@ -15,8 +15,13 @@ include 'conn.php';
 				<th style="width: 170px;">Tên nhân viên</th>
 				<th>Ngày sinh</th>
 				<th>Giới tính</th>
+<<<<<<< HEAD
 				<th >Hộ khẩu thường trú</th>
 				<th>Điện thoại</th>
+=======
+				<th class='canhgiua'>HKTT</th>
+				<th>Điện thoại
+>>>>>>> d5ce548eb3bf311fb7253906c93cb0761c1a2a87
 				<th>Sửa</th>
 				<th>Chi tiết</th>
 				<th>Xóa</th>
@@ -47,9 +52,9 @@ include 'conn.php';
 
 				<td class='canhgiua chuinhoa'>$row_nhanvien[so_dien_thoai]</td>
 				";?>
-				<td class="canhgiuanek12"><input type="button" name="edit" value="Sửa" id="<?php echo $row_nhanvien['id']; ?>" class="btn btn-primary btn-xs id_sua_nhanvien" /></td>
-				<td class="canhgiuanek12"><input type="button" name="view" value="Chi tiết" id="<?php echo $row_nhanvien['id']; ?>" class="btn btn-success btn-xs view_chitietnhanvien" /></td>
-				<td class="canhgiuanek12"><input type="button" name="delete" value="Xóa" id="<?php echo $row_nhanvien['id']; ?>" class="btn btn-info btn-danger btn-xs xoa_nhanvien" /></td>
+				<td class="canhgiua"><input type="button" name="edit" value="Sửa" id="<?php echo $row_nhanvien['id']; ?>" class="btn btn-success btn-xs id_sua_nhanvien" /></td>
+				<td class="canhgiua"><input type="button" name="view" value="Chi tiết" id="<?php echo $row_nhanvien['id']; ?>" class="btn btn-warning btn-xs view_chitietnhanvien" /></td>
+				<td class="canhgiua"><input type="button" name="delete" value="Xóa" id="<?php echo $row_nhanvien['id']; ?>" class="btn btn-info btn-danger btn-xs xoa_nhanvien" /></td>
 				<?php echo "
 			</tr>
 			";

@@ -40,22 +40,22 @@
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="quanlysinhvien.php" class="list-group-item">Thông tin khác</a>
+						<a href="quanly_thongtin_khach.php" class="list-group-item">Thông tin khác</a>
 					</div>
 					<button class="dropdown-btn">Quản lý phòng
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="" class="list-group-item">Thông tin Phòng</a>
-						<a href="#" class="list-group-item">Quản lý Loại phòng</a>
-						<a href="#" class="list-group-item">Quản Đã ở</a>
-						<a href="#" class="list-group-item">Quản Đang ở</a>
+						<a href="quanly_thongtin_phong.php" class="list-group-item">Thông tin Phòng</a>
+						<a href="quanly_thongtin_loai_phong.php" class="list-group-item">Quản lý Loại phòng</a>
+						<a href="#" class="list-group-item">Quản Đã thuê</a>
+						<a href="#" class="list-group-item">Quản Đang thuê</a>
 					</div>
 					<button class="dropdown-btn">Quản lý Thu
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="" class="list-group-item">Giá Phòng</a>
+						<a href="quanly_thongtin_gia_phong.php" class="list-group-item">Giá Phòng</a>
 						<a href="#" class="list-group-item">Quản lý Tiền</a>
 					</div>
 					

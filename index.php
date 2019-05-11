@@ -11,6 +11,6 @@ if (isset($_SESSION['idnv']) && $_SESSION['kt_dangnhap_nv'] == 1 && isset($_SESS
 	// 		header("location:./../admin/login");
 	// }
 } else {
-	header("location:./../quanly/login");
+	header("location:./quanly/login");
 }
 ?>

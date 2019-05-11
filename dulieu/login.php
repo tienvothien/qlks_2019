@@ -18,7 +18,7 @@ if (isset($_POST['tendangnhap_login']) && isset($_POST['matkhau_login'])) {
 				$_SESSION['ma_nhan_vien'] = $row1['ma_nhan_vien'];
 				$_SESSION['ho_nhan_vien'] = $row1['ho_nhan_vien'];
 				$_SESSION['ten_nhan_vien'] = $row1['ten_nhan_vien'];
-				$_SESSION['kt_dangnhap_sv'] = 1;
+				$_SESSION['kt_dangnhap_nv'] = 1;
 
 		} else {
 			echo "1";
