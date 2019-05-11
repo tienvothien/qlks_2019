@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 10, 2019 lúc 04:41 PM
+-- Thời gian đã tạo: Th5 11, 2019 lúc 04:18 AM
 -- Phiên bản máy phục vụ: 10.1.29-MariaDB
 -- Phiên bản PHP: 7.2.0
 
@@ -21,6 +21,33 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `qlks_giao`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `giaphong`
+--
+
+CREATE TABLE `giaphong` (
+  `id` int(11) NOT NULL,
+  `ma_gia_phong` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `ten_gia_phong` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
+  `gia_phong_gio` int(11) NOT NULL,
+  `gia_phong_ngay` int(11) NOT NULL,
+  `id_loai_phong` int(11) NOT NULL,
+  `ngaythem` datetime NOT NULL,
+  `id_nguoithem` int(11) NOT NULL,
+  `xoa` int(11) DEFAULT '0',
+  `id_nguoixoa` int(11) DEFAULT NULL,
+  `ngayxoa` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `giaphong`
+--
+
+INSERT INTO `giaphong` (`id`, `ma_gia_phong`, `ten_gia_phong`, `gia_phong_gio`, `gia_phong_ngay`, `id_loai_phong`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
+(1, 'GP100', 'Giá phòng ví dụ', 50000, 0, 1, '2019-05-14 00:43:00', 2, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -791,6 +818,35 @@ INSERT INTO `khachhang` (`id`, `ma_khach_hang`, `ten_khach_hang`, `ho_khach_hang
 (1, 1900000001, 'Võ Thiện', 'Tiên', 'Nam', '1992-03-08', 91, '123456789', '2019-05-10', 91, '0568837004', 91, 909, 31021, 'Tổ 3', '2019-05-31 00:00:00', 2, 0, NULL, NULL),
 (2, 1900000002, 'một', 'Khách hành', 'Nam', '2019-12-31', 89, '123456780', '2019-12-31', 89, '0987654321', 89, 886, 30337, 'Tổ 1', '2019-05-10 21:12:31', 2, 0, 2, '2019-05-10 09:35:15'),
 (7, 1900000003, 'hai', 'Khách hành', 'Nam', '2019-12-31', 89, '987654321', '2019-12-31', 89, '', 77, 748, 26572, 'Tổ 1', '2019-05-10 21:15:25', 2, 0, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `loaiphong`
+--
+
+CREATE TABLE `loaiphong` (
+  `id` int(11) NOT NULL,
+  `ma_loai_phong` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `ten_loai_phong` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
+  `nguoi_o` int(11) NOT NULL,
+  `dien_tich` int(11) NOT NULL,
+  `ngaythem` datetime NOT NULL,
+  `id_nguoithem` int(11) NOT NULL,
+  `xoa` int(11) DEFAULT '0',
+  `id_nguoixoa` int(11) DEFAULT NULL,
+  `ngayxoa` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `loaiphong`
+--
+
+INSERT INTO `loaiphong` (`id`, `ma_loai_phong`, `ten_loai_phong`, `nguoi_o`, `dien_tich`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
+(1, 'LP100', 'Loại phòng ví dụ', 2, 34, '2019-05-16 00:00:00', 2, 0, NULL, NULL),
+(2, 'LP101', 'Loại Phòng Ví Dụ 1', 12, 20, '2019-05-11 08:23:25', 2, 0, NULL, NULL),
+(3, 'LP102', 'Loại Phòng Ví Dụ 4', 12, 213, '2019-05-11 08:25:53', 2, 0, NULL, NULL),
+(4, 'LP103', 'Loại Phòng Ví Dụ 3', 2, 21, '2019-05-11 08:26:22', 2, 1, 2, '2019-05-11 08:29:56');
 
 -- --------------------------------------------------------
 
@@ -12134,6 +12190,15 @@ INSERT INTO `xa` (`maxa`, `tenxa`, `capxa`, `mahuyen`, `matinh`) VALUES
 --
 
 --
+-- Chỉ mục cho bảng `giaphong`
+--
+ALTER TABLE `giaphong`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `ma_nhan_vien` (`ma_gia_phong`),
+  ADD KEY `id_nguoithem` (`id_nguoithem`),
+  ADD KEY `id_nguoixoa` (`id_nguoixoa`);
+
+--
 -- Chỉ mục cho bảng `huyen`
 --
 ALTER TABLE `huyen`
@@ -12149,6 +12214,15 @@ ALTER TABLE `khachhang`
   ADD KEY `matinh` (`matinh`),
   ADD KEY `mahuyen` (`mahuyen`),
   ADD KEY `maxa` (`maxa`),
+  ADD KEY `id_nguoithem` (`id_nguoithem`),
+  ADD KEY `id_nguoixoa` (`id_nguoixoa`);
+
+--
+-- Chỉ mục cho bảng `loaiphong`
+--
+ALTER TABLE `loaiphong`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `ma_nhan_vien` (`ma_loai_phong`),
   ADD KEY `id_nguoithem` (`id_nguoithem`),
   ADD KEY `id_nguoixoa` (`id_nguoixoa`);
 
@@ -12189,10 +12263,22 @@ ALTER TABLE `xa`
 --
 
 --
+-- AUTO_INCREMENT cho bảng `giaphong`
+--
+ALTER TABLE `giaphong`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT cho bảng `loaiphong`
+--
+ALTER TABLE `loaiphong`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `nhanvien`

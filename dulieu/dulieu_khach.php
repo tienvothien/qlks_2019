@@ -12,11 +12,11 @@ include 'conn.php';
 			<tr>
 				<th >STT</th>
 				<th>MSSV</th>
-				<th style="width: 120px;">Tên Sinh viên</th>
+				<th style="width: 100px;">Tên Sinh viên</th>
 				<th>Ngày sinh</th>
 				<th>Giới tính</th>
 				<th>CMND</th>
-				<th >HKTT</th>
+				<th class='canhgiua'>HKTT</th>
 				<th>Điện thoại
 				<th>Sửa</th>
 				<th>Chi tiết</th>
@@ -31,7 +31,7 @@ include 'conn.php';
 				$diachi1='';
 				// lấy địa chỉ
 				$diachi = mysqli_fetch_array(mysqli_query($conn, "SELECT xa.capxa, xa.tenxa, huyen.tenhuyen, huyen.caphuyen, tinh.tentinh FROM tinh INNER JOIN huyen ON tinh.matinh = huyen.matinh INNER JOIN xa ON huyen.mahuyen = xa.mahuyen WHERE xa.maxa = '$row_khachhang[maxa]'"));
-				$diachi1=$row_khachhang['sonha'].",".$diachi["capxa"] .$diachi['tenxa'].",".$diachi["caphuyen"].$diachi['tenhuyen'].",".$diachi['tentinh'];
+				$diachi1=$row_khachhang['sonha'].", ".$diachi["capxa"] .$diachi['tenxa'].", ".$diachi["caphuyen"].$diachi['tenhuyen'].", ".$diachi['tentinh'];
 				
 				//end địa chỉ
 				// lấy tên lớp
@@ -47,11 +47,11 @@ include 'conn.php';
 				<td class='canhgiua chuinthuong'>$row_khachhang[cmnd]</td>
 				<td class=' chuinthuong '>$diachi1</td>
 
-				<td class='canhgiua chuinhoa'>$row_khachhang[so_dien_thoai]</td>
+				<td class='canhgicanhgiuaua chuinhoa'>$row_khachhang[so_dien_thoai]</td>
 				";?>
-				<td class="canhgiuanek12"><input type="button" name="edit" value="Sửa" id="<?php echo $row_khachhang['id']; ?>" class="btn btn-primary btn-xs id_sua_khachhang" /></td>
-				<td class="canhgiuanek12"><input type="button" name="view" value="Chi tiết" id="<?php echo $row_khachhang['id']; ?>" class="btn btn-success btn-xs view_chitietkhachhang" /></td>
-				<td class="canhgiuanek12"><input type="button" name="delete" value="Xóa" id="<?php echo $row_khachhang['id']; ?>" class="btn btn-info btn-danger btn-xs xoa_khachhang" /></td>
+				<td class="canhgiua"><input type="button" name="edit" value="Sửa" id="<?php echo $row_khachhang['id']; ?>" class="btn btn-success btn-xs id_sua_khachhang" /></td>
+				<td class="canhgiua"><input type="button" name="view" value="Chi tiết" id="<?php echo $row_khachhang['id']; ?>" class="btn btn-warning btn-xs view_chitietkhachhang" /></td>
+				<td class="canhgiua"><input type="button" name="delete" value="Xóa" id="<?php echo $row_khachhang['id']; ?>" class="btn btn-info btn-danger btn-xs xoa_khachhang" /></td>
 				<?php echo "
 			</tr>
 			";
