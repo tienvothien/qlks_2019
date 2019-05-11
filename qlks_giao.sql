@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 11, 2019 lúc 06:31 AM
+-- Thời gian đã tạo: Th5 11, 2019 lúc 01:43 PM
 -- Phiên bản máy phục vụ: 10.1.29-MariaDB
 -- Phiên bản PHP: 7.2.0
 
@@ -918,7 +918,9 @@ CREATE TABLE `phong` (
 --
 
 INSERT INTO `phong` (`id`, `ma_phong`, `id_loai_phong`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
-(1, '101', 9, '2019-05-04 00:00:00', 2, 0, NULL, NULL);
+(1, '101', 9, '2019-05-04 00:00:00', 2, 0, NULL, NULL),
+(2, '102', 9, '2019-05-11 13:05:04', 2, 0, 2, '2019-05-11 01:12:59'),
+(3, '103', 5, '2019-05-11 17:55:24', 2, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -946,6 +948,33 @@ INSERT INTO `taikhoan` (`id`, `tendangnhap`, `matkhau`, `ngaythem`, `id_nguoithe
 (2, 'NV105', 'ad14c4547a14808c473f8a7a8237b121', '2019-05-10 16:23:19', 2, 0, NULL, NULL),
 (3, 'NV106', '09973a757ebabe2039c6a9a37a7e853e', '2019-05-10 16:25:56', 2, 0, NULL, NULL),
 (4, 'NV107', 'f3479af23a905d0b79f2600208ea11a9', '2019-05-10 21:16:49', 2, 0, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `thuephong`
+--
+
+CREATE TABLE `thuephong` (
+  `id` int(11) NOT NULL,
+  `id_phong` int(11) NOT NULL,
+  `id_khach_hang` int(11) NOT NULL,
+  `thoi_gian_vao` datetime NOT NULL,
+  `thoi_gian_ra` datetime DEFAULT NULL,
+  `ngaythem` datetime NOT NULL,
+  `id_nguoithem` int(11) NOT NULL,
+  `xoa` int(11) DEFAULT '0',
+  `id_nguoixoa` int(11) DEFAULT NULL,
+  `ngayxoa` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `thuephong`
+--
+
+INSERT INTO `thuephong` (`id`, `id_phong`, `id_khach_hang`, `thoi_gian_vao`, `thoi_gian_ra`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
+(1, 1, 1, '2019-05-11 15:48:31', NULL, '2019-05-11 15:48:31', 2, 0, NULL, NULL),
+(4, 1, 7, '2019-05-11 15:50:56', NULL, '2019-05-11 15:50:56', 2, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -12290,6 +12319,15 @@ ALTER TABLE `taikhoan`
   ADD KEY `id_nguoixoa` (`id_nguoixoa`);
 
 --
+-- Chỉ mục cho bảng `thuephong`
+--
+ALTER TABLE `thuephong`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_nguoithem` (`id_nguoithem`),
+  ADD KEY `id_nguoixoa` (`id_nguoixoa`),
+  ADD KEY `id_loai_phong` (`id_khach_hang`);
+
+--
 -- Chỉ mục cho bảng `tinh`
 --
 ALTER TABLE `tinh`
@@ -12335,13 +12373,19 @@ ALTER TABLE `nhanvien`
 -- AUTO_INCREMENT cho bảng `phong`
 --
 ALTER TABLE `phong`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT cho bảng `thuephong`
+--
+ALTER TABLE `thuephong`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

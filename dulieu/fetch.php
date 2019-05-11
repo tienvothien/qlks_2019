@@ -32,6 +32,22 @@
 		echo json_encode($row);
 		// echo "1";
 	}//end dữ liệu giá phòng
+	if (isset($_POST['id_1_phong_sua'])) {// dữ liệu giá phòng
+		include 'conn.php';
+		$query = "SELECT * FROM phong WHERE phong.id='".$_POST["id_1_phong_sua"]."'";
+		$result = mysqli_query($conn, $query);
+		$row = mysqli_fetch_array($result);
+		echo json_encode($row);
+		// echo "1";
+	}//end dữ liệu giá phòng
+	if (isset($_POST['id_index_phong_sua'])) {// dữ liệu giá phòng
+		include 'conn.php';
+		$query = "SELECT phong.id, phong.ma_phong, loaiphong.ten_loai_phong, giaphong.gia_phong_gio, giaphong.gia_phong_ngay FROM phong, giaphong, loaiphong WHERE phong.id='$_POST[id_index_phong_sua]' and phong.id_loai_phong=loaiphong.id AND loaiphong.id=giaphong.id_loai_phong";
+		$result = mysqli_query($conn, $query);
+		$row = mysqli_fetch_array($result);
+		echo json_encode($row);
+		// echo "1";
+	}//end dữ liệu giá phòng
 ?>
 	
 

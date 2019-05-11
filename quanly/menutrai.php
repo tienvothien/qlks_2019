@@ -49,7 +49,7 @@
 						<a href="quanly_thongtin_phong.php" class="list-group-item">Thông tin Phòng</a>
 						<a href="quanly_thongtin_loai_phong.php" class="list-group-item">Quản lý Loại phòng</a>
 						<a href="#" class="list-group-item">Quản Đã thuê</a>
-						<a href="#" class="list-group-item">Quản Đang thuê</a>
+						<a href="quanly_thongtin_dangthue.php" class="list-group-item">Quản Đang thuê</a>
 					</div>
 					<button class="dropdown-btn">Quản lý Thu
 					<i class="fa fa-caret-down"></i>
