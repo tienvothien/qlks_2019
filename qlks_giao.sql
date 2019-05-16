@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 11, 2019 lúc 01:43 PM
+-- Thời gian đã tạo: Th5 16, 2019 lúc 05:03 AM
 -- Phiên bản máy phục vụ: 10.1.29-MariaDB
 -- Phiên bản PHP: 7.2.0
 
@@ -12316,7 +12316,8 @@ ALTER TABLE `phong`
 ALTER TABLE `taikhoan`
   ADD PRIMARY KEY (`id`),
   ADD KEY `tendangnhap` (`tendangnhap`),
-  ADD KEY `id_nguoixoa` (`id_nguoixoa`);
+  ADD KEY `id_nguoixoa` (`id_nguoixoa`),
+  ADD KEY `id_nguoithem` (`id_nguoithem`);
 
 --
 -- Chỉ mục cho bảng `thuephong`
@@ -12325,7 +12326,8 @@ ALTER TABLE `thuephong`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_nguoithem` (`id_nguoithem`),
   ADD KEY `id_nguoixoa` (`id_nguoixoa`),
-  ADD KEY `id_loai_phong` (`id_khach_hang`);
+  ADD KEY `id_loai_phong` (`id_khach_hang`),
+  ADD KEY `id_phong` (`id_phong`);
 
 --
 -- Chỉ mục cho bảng `tinh`
@@ -12385,7 +12387,7 @@ ALTER TABLE `taikhoan`
 -- AUTO_INCREMENT cho bảng `thuephong`
 --
 ALTER TABLE `thuephong`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -12433,10 +12435,28 @@ ALTER TABLE `nhanvien`
   ADD CONSTRAINT `nhanvien_ibfk_5` FOREIGN KEY (`id_nguoixoa`) REFERENCES `nhanvien` (`id`);
 
 --
+-- Các ràng buộc cho bảng `phong`
+--
+ALTER TABLE `phong`
+  ADD CONSTRAINT `phong_ibfk_1` FOREIGN KEY (`id_loai_phong`) REFERENCES `loaiphong` (`id`),
+  ADD CONSTRAINT `phong_ibfk_2` FOREIGN KEY (`id_nguoithem`) REFERENCES `nhanvien` (`id`),
+  ADD CONSTRAINT `phong_ibfk_3` FOREIGN KEY (`id_nguoixoa`) REFERENCES `nhanvien` (`id`);
+
+--
 -- Các ràng buộc cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  ADD CONSTRAINT `taikhoan_ibfk_3` FOREIGN KEY (`id_nguoixoa`) REFERENCES `nhanvien` (`id`);
+  ADD CONSTRAINT `taikhoan_ibfk_3` FOREIGN KEY (`id_nguoixoa`) REFERENCES `nhanvien` (`id`),
+  ADD CONSTRAINT `taikhoan_ibfk_4` FOREIGN KEY (`id_nguoithem`) REFERENCES `nhanvien` (`id`);
+
+--
+-- Các ràng buộc cho bảng `thuephong`
+--
+ALTER TABLE `thuephong`
+  ADD CONSTRAINT `thuephong_ibfk_1` FOREIGN KEY (`id_khach_hang`) REFERENCES `khachhang` (`id`),
+  ADD CONSTRAINT `thuephong_ibfk_2` FOREIGN KEY (`id_nguoithem`) REFERENCES `nhanvien` (`id`),
+  ADD CONSTRAINT `thuephong_ibfk_3` FOREIGN KEY (`id_nguoixoa`) REFERENCES `nhanvien` (`id`),
+  ADD CONSTRAINT `thuephong_ibfk_4` FOREIGN KEY (`id_phong`) REFERENCES `phong` (`id`);
 
 --
 -- Các ràng buộc cho bảng `xa`
