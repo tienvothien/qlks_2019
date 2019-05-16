@@ -15,13 +15,8 @@ include 'conn.php';
 				<th style="width: 170px;">Tên nhân viên</th>
 				<th>Ngày sinh</th>
 				<th>Giới tính</th>
-<<<<<<< HEAD
 				<th >Hộ khẩu thường trú</th>
 				<th>Điện thoại</th>
-=======
-				<th class='canhgiua'>HKTT</th>
-				<th>Điện thoại
->>>>>>> d5ce548eb3bf311fb7253906c93cb0761c1a2a87
 				<th>Sửa</th>
 				<th>Chi tiết</th>
 				<th>Xóa</th>
