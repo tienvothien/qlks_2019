@@ -29,7 +29,6 @@ $(document).ready(function () {
 				}
 			});
 	});
-	
 	// sửa thông tin index_phong
 	$(document).on('click', '.id_sua_thuephong', function(){
 		var id_index_phong_sua = $(this).attr("id");
@@ -91,7 +90,7 @@ $(document).ready(function () {
 	$(document).on('click', '.xoa_thuephong', function(){
 		var id_index_phong_sua = $(this).attr("id");
 		// alert(id_index_phong_sua);
-			$.ajax({
+			$.ajax({// hiện thoonh tin khách thuê phòng
 				url:"./../dulieu/dulieu_dangthue.php",
 				method:"POST",
 				data:{id_chitietindex_phong:id_index_phong_sua},
@@ -100,7 +99,23 @@ $(document).ready(function () {
 					$('#thongtinnv_xoa12').html(data1);
 					$('#modal_xoa_index_phong').modal('show');
 				}
-			});
+			});// end hiện thông tin khách thuê phòng
+			$.ajax({// hiện thông tin phòng
+				url:"./../dulieu/chitiet_loaiptinhtien.php",
+				method:"POST",
+				data:{id_chitiet1_phong:id_index_phong_sua},
+				success:function(data11){
+					$('#tt_loaiphong').html(data11);
+				}
+			});// hiện thông tin phòng
+			$.ajax({// hiện thông tin phòng
+				url:"./../dulieu/chitiet_loaiptinhtien.php",
+				method:"POST",
+				data:{id_chitiet1_phong_o12:id_index_phong_sua},
+				success:function(data11){
+					$('#tt_tien').html(data11);
+				}
+			});// hiện thông tin phòng
 	});
 	// xử lý xoa index_phong 
 	$('#From_xoa_index_phong').on('submit', function(event){

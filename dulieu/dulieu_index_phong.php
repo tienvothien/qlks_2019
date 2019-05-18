@@ -18,7 +18,7 @@ include 'conn.php';
 				//end tên lớp
 				?>
 				<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-					<?php if (mysqli_num_rows($row_ktcok)) {
+					<?php if (mysqli_num_rows($row_ktcok)) { // kiểm tra có ng đangthue
 						echo "<div class='thumbnail maune_do'>";
 					}else{
 						echo "<div class='thumbnail maune_12'>";

@@ -24,7 +24,7 @@ include 'conn.php';
 			<?php
 			$stt = 1;
 			while ($row_phong = mysqli_fetch_array($selecet_phong)) {
-				$r = mysqli_fetch_array(mysqli_query($conn, "SELECT loaiphong.ma_loai_phong, loaiphong.ten_loai_phong, giaphong.gia_phong_gio, giaphong.gia_phong_ngay FROM Loaiphong, giaphong where loaiphong.id = '$row_phong[id_loai_phong]'"));
+				$r = mysqli_fetch_array(mysqli_query($conn, "SELECT loaiphong.ma_loai_phong, loaiphong.ten_loai_phong, giaphong.gia_phong_gio, giaphong.gia_phong_ngay FROM Loaiphong, giaphong, phong where phong.id='$row_phong[id]' AND phong.id_loai_phong = loaiphong.id AND loaiphong.id= giaphong.id_loai_phong"));
 				//end địa chỉ
 				// lấy tên lớp
 				 

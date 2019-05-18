@@ -11,8 +11,8 @@ include 'conn.php';
 		<thead>
 			<tr>
 				<th class='canhgiua' >STT</th>
-				<th class='canhgiua'>Mã giá phòng</th>
-				<th class='canhgiua' style="width: 100px;">Tên giá phòng</th>
+				<th class='canhgiua'>Mã giá <br> phòng</th>
+				<th class='canhgiua' >Tên giá phòng</th>
 				<th class='canhgiua'>Giá Giờ <br> (VNĐ)</th>
 				<th class='canhgiua'>Giá ngày <br> (VNĐ)</th>
 				<th class='canhgiua'>Loại phòng</th>
@@ -36,7 +36,7 @@ include 'conn.php';
 				<td class='chuinthuong'> $row_giaphong[ten_gia_phong]</td>
 				<td class='chuinthuong canhgiua'> ". number_format ($row_giaphong["gia_phong_gio"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 				<td class='chuinthuong canhgiua'> ". number_format ($row_giaphong["gia_phong_ngay"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
-				<td class='chuinthuong canhgiua'> $r[ma_loai_phong] - $r[ten_loai_phong]</td>
+				<td class='chuinthuong '> $r[ma_loai_phong] - $r[ten_loai_phong]</td>
 
 				";?>
 				<td class="canhgiua"><input type="button" name="edit" value="Sửa" id="<?php echo $row_giaphong['id']; ?>" class="btn btn-success btn-xs id_sua_giaphong" /></td>

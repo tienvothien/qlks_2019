@@ -16,7 +16,6 @@ $(document).ready(function() {
 					alert('Mật khẩu không đúng');
 					document.getElementById('matkhau_login').focus();
 				}else {
-					alert('Đăng nhập thành cống');
 					 window.location="./../index.php";
 				}
 			}

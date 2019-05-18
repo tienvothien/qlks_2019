@@ -61,7 +61,7 @@
 				$('#myTable').DataTable();
 				} );
 		</script>
-				
+		
 		<!-- xem thông tin index_phong -->
 		<div id="dataModal" class="modal fade">
 			<div class="modal-dialog " style="width: 700px;">
@@ -99,14 +99,14 @@
 								<label>Loại phòng</label>
 								<select  name="idloai_phong_index_phong_sua_12" id="idloai_phong_index_phong_sua_12" class="form-control chuinthuong" required="required" disabled="">
 									<option value="" >Chọn Loại phòng</option>
-									<?php 
+									<?php
 										$qr= mysqli_query($conn,"SELECT loaiphong.id,loaiphong.ma_loai_phong, loaiphong.ten_loai_phong FROM loaiphong Where loaiphong.xoa=0");
 										while ($r=mysqli_fetch_array($qr)) {
 											echo "
 													<option value='".$r['id']."'>".$r['ma_loai_phong']."-".$r['ten_loai_phong']."</option>
 											";
 										}
-									 ?>
+									?>
 									
 								</select>
 							</div>
@@ -128,7 +128,6 @@
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hoten_cb_sua ">
 								<label>Thông tin khác thuê</label>
-
 								<div id="tt_khachthue">
 									
 								</div>
@@ -151,9 +150,24 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title canhgiua">Trả phòng</h4>
+							<h4 class="modal-title ">Trả phòng</h4>
 						</div>
-						<div class="modal-body" id="thongtinnv_xoa12">
+						<div class="modal-body" >
+							<h4 class="text-center">Thông tin khách thuê</h4><hr id="hr1">
+							<div id="thongtinnv_xoa12">	</div>
+							<div class="row">
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<h4 class="text-center">Thông phòng</h4>
+									<div id="tt_loaiphong">
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<h4 class="text-center">Thông tin tiền</h4>
+									<div id="tt_tien">
+									</div>
+								</div>
+								<br>
+							</div>
 						</div>
 						<form method="post" id="From_xoa_index_phong" data-confirm="Bạn có chắn muốn xóa thông tin này?">
 							<input type="" name="id_index_phong_xoa_12" id="id_index_phong_xoa_12" />
