@@ -65,28 +65,78 @@ include 'conn.php';
 					$ngayvao = date("Y/m/d H:i:s" , strtotime($row_phong['thoi_gian_vao']));// thời gian vào
 					$ngayra =date("Y/m/d H:i:s"); // nhày giờ hệ thống
 					$ngay= round((strtotime($ngayra)-strtotime($ngayvao))/(3600), 2);// tính số giờ đã ở
-					if ($ngay>4) {
-						$han_12_gio = date("Y/m/d 12:00:00");// 12 giờ hiện tại
-						if (strtotime($ngayra)>strtotime($han_12_gio)) {
+					$tienphongngay=0;
+					$tien_phuthu=0;
+					$tongtien=0;
+					$qua_12_so_gio=0;
+					$tientheogio = $row_phong['gia_phong_gio'];
+					$tientheongay = $row_phong['gia_phong_ngay'];
+					$han_12_gio = date("Y/m/d 12:00:00");// 12 giờ hiện tại
+					$thoi_gian_o_tinh_ngay = round((strtotime($ngayra)- strtotime($ngayvao))/(3600*24), 0);
+					if ($ngay>4) {// trả phòng hơn 4 tiếng
+						$kiem_tra_ngay_vao= date("Y/m/d" , strtotime($row_phong['thoi_gian_vao'])); // láy ngày vào
+						$kiem_tra_ngay_hientai= date("Y/m/d" ); // láy ngày vào
+						if (strtotime($ngayra)>strtotime($han_12_gio) && $kiem_tra_ngay_vao !=  $kiem_tra_ngay_hientai ) {// nếu trả phòng sau 12 giờ
 							// sô giờ qua 12 giờ 
-							echo "--".$qua_12_so_gio = round((strtotime($ngayra)-strtotime($han_12_gio))/3600,2);
-							//tính số ngày
-							echo $thoi_gian_o_tinh_ngay = round((strtotime($han_12_gio)- strtotime($ngayvao))/(3600*24), 0)." ngày";
-						}else{
-							echo $thoi_gian_o_tinh_ngay = round((strtotime($han_12_gio)- strtotime($ngayvao))/(3600*24), 0)." ngày";
+							$qua_12_so_gio = round((strtotime($ngayra)-strtotime($han_12_gio))/3600,2);
+							$thoi_gian_o_tinh_ngay = round((strtotime($han_12_gio)- strtotime($ngayvao))/(3600*24), 0);//tính số ngày
+							echo $thoi_gian_o_tinh_ngay." ngày";
+							$tienphongngay=$thoi_gian_o_tinh_ngay*$tientheongay;// tính tiền phòng rheo số ngày ở
+							$tongtien = $tienphongngay;// gán tổng tiền phòng
+							if ($qua_12_so_gio>4) {// nếu số giờ trả sau 12 giờ hơn 4 giờ
+								$tongtien=$tongtien+$tientheongay;// tiền phòng bằng tiền phòng cộng thêm tiền 1 ngày
+								$tien_phuthu =$tientheongay;// tính tiền phụ thu theo ngày
+							}else{// nếu số giờ trả sau 12 giờ không quá 4 giờ
+								$tongtien=$tongtien+$tientheogio;// tiền phòng cộng thêm tiền giờ
+								$tien_phuthu= $tientheogio;// tính tiền phụ thu theo tiền giờ
+							}
+
+						}else{// trả phòng trước 12 giờ
+							if ($thoi_gian_o_tinh_ngay<1) {
+								$thoi_gian_o_tinh_ngay=round((strtotime($ngayra)- strtotime($ngayvao))/(3600), 2);
+								echo $thoi_gian_o_tinh_ngay." giờ";
+								$tienphongngay=$tientheongay;// tính tiền phòng không có phụ thu
+								$tongtien = $tienphongngay;// tính tổng số tiền phòng
+							}else{
+								echo $thoi_gian_o_tinh_ngay." ngày";
+								$tienphongngay=$thoi_gian_o_tinh_ngay*$tientheongay;// tính tiền phòng không có phụ thu
+								$tongtien = $tienphongngay;// tính tổng số tiền phòng
+							}
+							
+							
 						}
 						
-					}else{
-						echo $row_phong['gia_phong_gio'];
+					}else{// trả phòng trước 4 tiếng
+						echo $thoi_gian_o_tinh_ngay =round((strtotime($ngayra)- strtotime($ngayvao))/(3600), 0)." giờ";
+						$tienphongngay = $tientheogio;// tính tổng tiền theo giờ
+						$tongtien = $tientheogio;// tính tổng tiền theo giờ
 					}
 				?></td>
 			</tr>
 			<tr>
-				<th>Số giờ quá 12 giờ</th>
+				<th class="canhgiua">Số giờ qua 12 giờ</th>
 				<td class="canhgiua"><?php 
 				$so_gio=floor($qua_12_so_gio);
 				$so_phuc=round(($qua_12_so_gio-$so_gio)*60, 0, PHP_ROUND_HALF_DOWN);
 				echo  $so_gio." giờ ".$so_phuc." phút"; ?></td>
+			</tr>
+			<tr>
+				<th class="canhgiua">Tiền phòng</th>
+				<td class="text-center">
+					<?php echo number_format ($tienphongngay , $decimals = 0 , $dec_point = "." , $thousands_sep = "," ) ?>
+				</td>
+			</tr>
+			<tr>
+				<th class="canhgiua">Tiền phụ thu quá giờ</th>
+				<td class="text-center">
+					<?php echo number_format ($tien_phuthu , $decimals = 0 , $dec_point = "." , $thousands_sep = "," ) ?>
+				</td>
+			</tr>
+			<tr>
+				<th class="canhgiua">Tổng tiền</th>
+				<td class="text-center" style="color:red;">
+					<?php echo number_format ($tongtien , $decimals = 0 , $dec_point = "." , $thousands_sep = "," ) ?>
+				</td>
 			</tr>
 
 			
