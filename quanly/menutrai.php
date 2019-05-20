@@ -48,7 +48,7 @@
 					<div class="dropdown-container">
 						<a href="quanly_thongtin_phong.php" class="list-group-item">Thông tin Phòng</a>
 						<a href="quanly_thongtin_loai_phong.php" class="list-group-item">Quản lý Loại phòng</a>
-						<a href="#" class="list-group-item">Quản Đã thuê</a>
+						<a href="quanly_thongtin_dathue.php" class="list-group-item">Quản Đã thuê</a>
 						<a href="quanly_thongtin_dangthue.php" class="list-group-item">Quản Đang thuê</a>
 					</div>
 					<button class="dropdown-btn">Quản lý Thu
@@ -56,7 +56,7 @@
 					</button>
 					<div class="dropdown-container">
 						<a href="quanly_thongtin_gia_phong.php" class="list-group-item">Giá Phòng</a>
-						<a href="#" class="list-group-item">Quản lý Tiền</a>
+						<a href="quanly_thongtin_thutien.php" class="list-group-item">Quản lý Tiền</a>
 					</div>
 					
 				</div>

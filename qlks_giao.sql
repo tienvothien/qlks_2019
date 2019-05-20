@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 20, 2019 lúc 06:12 AM
+-- Thời gian đã tạo: Th5 20, 2019 lúc 06:04 PM
 -- Phiên bản máy phục vụ: 10.1.29-MariaDB
 -- Phiên bản PHP: 7.2.0
 
@@ -44,8 +44,10 @@ CREATE TABLE `bienlai` (
 --
 
 INSERT INTO `bienlai` (`id`, `id_phong`, `id_thuephong`, `ngay_tinhbienlai`, `id_nguoi_tinh`, `tongtien`, `tienngay`, `tienphuthu`) VALUES
-(1, 2, 5, '2019-05-20 11:01:47', 2, 250000, 250000, 0),
-(2, 2, 5, '2019-05-20 11:06:51', 2, 250000, 250000, 0);
+(1, 2, 5, '2017-05-20 11:01:47', 2, 250000, 250000, 0),
+(2, 2, 5, '2019-05-20 11:06:51', 2, 250000, 250000, 0),
+(3, 2, 5, '2019-05-01 13:06:17', 2, 450000, 250000, 200000),
+(4, 1, 1, '2019-05-19 00:00:00', 2, 450000, 250000, 200000);
 
 -- --------------------------------------------------------
 
@@ -1004,10 +1006,10 @@ CREATE TABLE `thuephong` (
 --
 
 INSERT INTO `thuephong` (`id`, `id_phong`, `id_khach_hang`, `thoi_gian_vao`, `thoi_gian_ra`, `ngaythem`, `id_nguoithem`, `xoa`, `id_nguoixoa`, `ngayxoa`) VALUES
-(1, 1, 1, '2019-05-19 07:00:31', NULL, '2019-05-17 19:48:31', 2, 0, NULL, NULL),
+(1, 1, 1, '2019-05-19 07:00:31', '2019-05-09 00:00:00', '2019-05-17 19:48:31', 2, 1, NULL, NULL),
 (4, 1, 7, '2019-05-11 15:50:56', '2019-05-18 00:00:00', '2019-05-11 15:50:56', 2, 1, NULL, NULL),
 (5, 2, 1, '2019-05-19 08:42:17', NULL, '2019-05-20 08:42:17', 2, 0, NULL, NULL),
-(6, 2, 1, '2019-05-20 08:42:27', NULL, '2019-05-20 08:42:27', 2, 0, NULL, NULL);
+(6, 2, 1, '2019-05-20 08:42:27', '2019-05-20 13:06:17', '2019-05-20 08:42:27', 2, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -12390,7 +12392,7 @@ ALTER TABLE `xa`
 -- AUTO_INCREMENT cho bảng `bienlai`
 --
 ALTER TABLE `bienlai`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `giaphong`

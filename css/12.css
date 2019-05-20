@@ -4,6 +4,17 @@
   font-family: "Times New Roman", Times, serif;
 }
 
+label.label_12 {
+    margin-top: 7px;
+    margin-right: 0px;
+}
+
+.ngaytim1 {
+    width: 30%;
+    float: left;
+    margin-right: 12px;
+}
+
 hr#hr1 {
     margin: 3px;
 }
