@@ -17,13 +17,20 @@ if (isset($_POST['cmnd_index_phong_sua_12'])) {
 			if ($row_sl['row_sl']==$slolp['slolp']) {
 				echo "1";
 			}else{
-				$row_ttkh=mysqli_fetch_array($kiemtra_mkhachhanh);
-				$insert_1_phong ="INSERT INTO thuephong(id_phong, id_khach_hang, thoi_gian_vao, ngaythem, id_nguoithem) VALUES ('$id_index_phong_sua_12','$row_ttkh[idkh]', '$ngay','$ngay','$_SESSION[idnv]')";
-				if (mysqli_query($conn, $insert_1_phong)) {
-							// thêm tài khoản vào
-					echo "99";
-				}else {
-					echo "100";
+				// kiểm tra xem khách có đang ở trong phòng hay khong
+				$id_kh = mysqli_fetch_array($kiemtra_mkhachhanh);
+				$sl_kh_dang_co_op=(mysqli_query($conn,"SELECT thuephong.id  as sl_kh_dang_co_op FROM thuephong where thuephong.thoi_gian_ra is null and thuephong.id_khach_hang='$id_kh[idkh]'"));
+				if (mysqli_num_rows($sl_kh_dang_co_op)) {
+					echo '101';
+				}else{
+					$row_ttkh=mysqli_fetch_array($kiemtra_mkhachhanh);
+					$insert_1_phong ="INSERT INTO thuephong(id_phong, id_khach_hang, thoi_gian_vao, ngaythem, id_nguoithem) VALUES ('$id_index_phong_sua_12','$row_ttkh[idkh]', '$ngay','$ngay','$_SESSION[idnv]')";
+					if (mysqli_query($conn, $insert_1_phong)) {
+								// thêm tài khoản vào
+						echo "99";
+					}else {
+						echo "100";
+					}
 				}
 			}
 		}

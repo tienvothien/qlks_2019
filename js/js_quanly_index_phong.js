@@ -68,10 +68,15 @@ $(document).ready(function () {
 					success:function (kql_update_index_phong) {
 						if (kql_update_index_phong==6) {
 		          			alert('Số CMND không tồn tạo');
-							document.getElementById("ma_index_phong_sua_12").focus();
+							document.getElementById("cmnd_index_phong_sua_12").focus();
 		          		}else if (kql_update_index_phong==1) {
 		          			alert('Lỗi vì Phòng đầy');
-							document.getElementById("ma_index_phong_sua_12").focus();
+							$("#cmnd_index_phong_sua_12").val("");
+							$('#tt_khachthue').html("");
+		          		}else if (kql_update_index_phong==101) {
+		          			alert('Lỗi vì Khách đang thuê phòng');
+							$("#cmnd_index_phong_sua_12").val("");
+							$('#tt_khachthue').html("");
 		          		}else if (kql_update_index_phong==99) {
 								alert('Cập nhật phòng mới thành công');
 								$('#form_themindex_phongmoi')[0].reset();
@@ -126,20 +131,20 @@ $(document).ready(function () {
 		}else{
 			var id_xoa_index_phong123=($('#id_index_phong_xoa_12').val());
 			$.ajax({
-				url:"./../dulieu/delete.php",
+				url:"./../dulieu/tinhtien_traphong.php",
 				method:"POST",
 				data:{id_xoa_index_phong123:id_xoa_index_phong123},
 				success:function(kq_xoa_index_phong){
-					if (kq_xoa_index_phong==99) {
-						alert('Xóa phòng thành công công');
-						$('#From_xoa_index_phong')[0].reset();
-						$('#modal_xoa_index_phong').modal('hide');
-						// $('#dulieuindex_phong').load("./../dulieu/dulieuindex_phong.php")
-						location.reload();
-					}else {
-						alert('Lỗi xóa Loại phòng');
-					}
-					// alert(kq_xoa_index_phong);
+					// if (kq_xoa_index_phong==99) {
+					// 	alert('Xóa phòng thành công công');
+					// 	$('#From_xoa_index_phong')[0].reset();
+					// 	$('#modal_xoa_index_phong').modal('hide');
+					// 	// $('#dulieuindex_phong').load("./../dulieu/dulieuindex_phong.php")
+					// 	location.reload();
+					// }else {
+					// 	alert('Lỗi xóa Loại phòng');
+					// }
+					alert(kq_xoa_index_phong);
 				}
 			});
 		}   

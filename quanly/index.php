@@ -169,7 +169,7 @@
 								<br>
 							</div>
 						</div>
-						<form method="post" id="From_xoa_index_phong" data-confirm="Bạn có chắn muốn xóa thông tin này?">
+						<form method="post" id="From_xoa_index_phong" data-confirm="Bạn có chắn muốn tính tiền phòng này?">
 							<input type="" name="id_index_phong_xoa_12" id="id_index_phong_xoa_12" />
 							<div class="modal-footer">
 								<input type="submit" name="insert_xoa" id="insert_xoa" value="Trả phòng" class="btn btn-danger canhgiua" />
