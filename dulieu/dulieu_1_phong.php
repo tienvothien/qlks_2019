@@ -32,7 +32,7 @@ include 'conn.php';
 			echo "
 				<td style='text-align:center;'>$stt</td>
 				<td class='chuinhoa canhgiua'>$row_phong[ma_phong]</td>
-				<td class='chuinthuong canhgiua'> $r[ma_loai_phong] - $r[ten_loai_phong]</td>
+				<td class='chuinthuong '> $r[ma_loai_phong] - $r[ten_loai_phong]</td>
 				<td class='chuinhoa canhgiua'>". number_format ($r["gia_phong_gio"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 				<td class='chuinhoa canhgiua'>". number_format ($r["gia_phong_ngay"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 

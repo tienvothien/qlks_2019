@@ -1,7 +1,7 @@
 <?php
 include 'conn.php';
 
-	$selecet_giaphong = mysqli_query($conn, "SELECT * FROM giaphong, loaiphong WHERE giaphong.xoa=0 and loaiphong.xoa=0 and giaphong.id_loai_phong=loaiphong.id order by giaphong.ten_gia_phong");
+	$selecet_giaphong = mysqli_query($conn, "SELECT giaphong.id, giaphong.ma_gia_phong, giaphong.ten_gia_phong, giaphong.gia_phong_gio, giaphong.gia_phong_ngay, giaphong.id_loai_phong FROM giaphong, loaiphong WHERE giaphong.xoa=0 and loaiphong.xoa=0 and giaphong.id_loai_phong=loaiphong.id order by giaphong.ten_gia_phong");
 	if (!mysqli_num_rows($selecet_giaphong)) {
 		echo "<div style='text-align: center;'> Chưa có dữ liệu</div>";
 	} else {

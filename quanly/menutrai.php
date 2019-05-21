@@ -25,7 +25,7 @@
 					<i class=" fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="quanlythongtintaikhoandangnhap.php" class="list-group-item">Quản lý tài khoản</a>
+						<a href="quanly_thongtintaikhoang.php" class="list-group-item">Quản lý tài khoản</a>
 						<a href="../dulieu/dangxuat.php"><span class="fa fa-log-in"></span> Đăng xuất</a>
 					</div>
 					
@@ -46,6 +46,7 @@
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
+						<a href="quanly_thongtin_gia_phong.php" class="list-group-item">Giá Phòng</a>
 						<a href="quanly_thongtin_phong.php" class="list-group-item">Thông tin Phòng</a>
 						<a href="quanly_thongtin_loai_phong.php" class="list-group-item">Quản lý Loại phòng</a>
 						<a href="quanly_thongtin_dathue.php" class="list-group-item">Quản Đã thuê</a>
@@ -55,7 +56,6 @@
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="quanly_thongtin_gia_phong.php" class="list-group-item">Giá Phòng</a>
 						<a href="quanly_thongtin_thutien.php" class="list-group-item">Quản lý Tiền</a>
 					</div>
 					

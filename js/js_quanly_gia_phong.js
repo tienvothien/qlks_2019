@@ -17,6 +17,7 @@ $(document).ready(function () {
 	// sửa thông tin gia_phong
 	$(document).on('click', '.id_sua_giaphong', function(){
 		var id_gia_phong_sua = $(this).attr("id");
+		// alert(id_gia_phong_sua);
 		$.ajax({
 			url:"../dulieu/fetch.php",
 			method:"POST",
@@ -24,14 +25,12 @@ $(document).ready(function () {
 			dataType:"json",
 			success:function(data_sua_gia_phong){
 				// alert(data_sua_gia_phong);
-				
-				$('#ma_gia_phong_sua_12').val(data_sua_gia_phong.ma_gia_phong);// tt mssv
+				// $('#ma_gia_phong_sua_12').val(data_sua_gia_phong.ma_gia_phong);// tt mssv
 				$('#ten_gia_phong_sua_12').val(data_sua_gia_phong.ten_gia_phong);// tt tên Loại phòng
 				$('#gia_phong_gio_sua_12').val(data_sua_gia_phong.gia_phong_gio);// tt ngày sinh
 				$('#gia_phong_ngay_sua_12').val(data_sua_gia_phong.gia_phong_ngay);// thông tinh giới tính
 				$('#idloai_phong_gia_phong_sua_12').val(data_sua_gia_phong.id_loai_phong);// thông tinh giới tính
 				
-
 				$('#id_gia_phong_sua_12').val(data_sua_gia_phong.id);// id sửa tt sinnh vien
 				$('#insert').val("Cập nhật");
 				$('#modal_sua_gia_phong').modal('show');
