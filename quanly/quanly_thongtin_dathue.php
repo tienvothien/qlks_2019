@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="../vendor/bootstrap.js"></script>
 	<link rel="stylesheet" href="../vendor/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/12.css">
-	<script type="text/javascript" src="./../js/js_quanly_.js"></script>
+	<script type="text/javascript" src="./../js/js_quanly_dathue.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
@@ -41,11 +41,45 @@
 						</div>
 					<hr class="ngay_ad"></div>
 					<div class="container-fluid">
+						<div class="row">
+							<form action="" method="POST" id="from_tim_dathue" role="form">
+								<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+									
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+									
+									<input type="" name="" id="" class="form-control ngaytim1" value="Từ ngày" title="" style="width: 15%; border: none;">
+									<input type="date" name="tim_dathue_ngaybd" id="tim_dathue_ngaybd" class="form-control ngaytim1" value="" title="">
+									<input type="" name="" id="" class="form-control ngaytim1" value="đến" title="" style="width: 10%; border: none;">
+									<input type="date" name="tim_dathue_ngaykt" id="tim_dathue_ngaykt" class="form-control ngaytim1" value="" title="">
+								</div>
+								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+									<select name="tim_dathue_id_phong" id="tim_dathue_id_phong" class="form-control" >
+										<option value="">Chọn phòng</option>
+										<?php 
+											$qr = mysqli_query($conn,"SELECT * FROM phong where phong.xoa=0 order by phong.ma_phong");
+											if (mysqli_num_rows($qr)) {
+												while ($r=mysqli_fetch_array($qr)) {
+													echo "
+														<option value='".$r['id']."'>$r[ma_phong]</option>
+													";
+												}
+											}
+
+										 ?>
+									</select>
+								</div>
+								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+									<button type="submit" name="tim_dathue_nut" class="btn btn-primary">Tìm</button>
+									
+								</div>
+							</form>
+						</div>
+						<br>
 						<div class="row"><!-- nho doi ten class -->
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<div class="dulieu_khachhang"><?php include './../dulieu/dulieu_dathue.php'; ?></div>
+							<div class="dulieu_khachhang" id="dulieu_khachhang"><?php include './../dulieu/dulieu_dathue.php'; ?></div>
 						</div>
-						
 						</div><!-- end thaydoi1 -->
 						</div><!-- end noidungthaydoi -->
 						</div> <!-- end col-9 -->

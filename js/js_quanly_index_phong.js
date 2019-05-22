@@ -113,14 +113,14 @@ $(document).ready(function () {
 					$('#tt_loaiphong').html(data11);
 				}
 			});// hiện thông tin phòng
-			$.ajax({// hiện thông tin phòng
+			$.ajax({// hiện thông tin tiền
 				url:"./../dulieu/chitiet_loaiptinhtien.php",
 				method:"POST",
 				data:{id_chitiet1_phong_o12:id_index_phong_sua},
 				success:function(data11){
 					$('#tt_tien').html(data11);
 				}
-			});// hiện thông tin phòng
+			});// hiện thông tin tiền
 	});
 	// xử lý xoa index_phong 
 	$('#From_xoa_index_phong').on('submit', function(event){

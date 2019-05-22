@@ -23,8 +23,7 @@ if (isset($_POST['cmnd_index_phong_sua_12'])) {
 				if (mysqli_num_rows($sl_kh_dang_co_op)) {
 					echo '101';
 				}else{
-					$row_ttkh=mysqli_fetch_array($kiemtra_mkhachhanh);
-					$insert_1_phong ="INSERT INTO thuephong(id_phong, id_khach_hang, thoi_gian_vao, ngaythem, id_nguoithem) VALUES ('$id_index_phong_sua_12','$row_ttkh[idkh]', '$ngay','$ngay','$_SESSION[idnv]')";
+					$insert_1_phong ="INSERT INTO thuephong(id_phong, id_khach_hang, thoi_gian_vao, ngaythem, id_nguoithem) VALUES ('$id_index_phong_sua_12','$id_kh[idkh]', '$ngay','$ngay','$_SESSION[idnv]')";
 					if (mysqli_query($conn, $insert_1_phong)) {
 								// thêm tài khoản vào
 						echo "99";

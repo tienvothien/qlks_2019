@@ -28,7 +28,9 @@
 						<a href="quanly_thongtintaikhoang.php" class="list-group-item">Quản lý tài khoản</a>
 						<a href="../dulieu/dangxuat.php"><span class="fa fa-log-in"></span> Đăng xuất</a>
 					</div>
-					
+					<?php if ($_SESSION['idnv']==2) {
+						
+					?>
 					<button class="dropdown-btn">Quản lý nhân viên
 					<i class="fa fa-caret-down"></i>
 					</button>
@@ -36,6 +38,7 @@
 						<a href="quanly_nhanvien.php" class="list-group-item">Thông tin nhân viên</a>
 						<a href="quanlylop.php" class="list-group-item">Quản lý vị trí</a>
 					</div>
+					<?php } ?>
 					<button class="dropdown-btn">Quản lý khách
 					<i class="fa fa-caret-down"></i>
 					</button>

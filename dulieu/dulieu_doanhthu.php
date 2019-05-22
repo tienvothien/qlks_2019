@@ -49,7 +49,7 @@ if (isset($_POST['tim_doanhthu_ngaybd'])) {
 				<td class='chuinthuong canhgiua'> ". number_format ($row_bienlai["tongtien"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 				<td class='chuinthuong canhgiua'> ". number_format ($row_bienlai["tienngay"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 				<td class='chuinthuong canhgiua'> ". number_format ($row_bienlai["tienphuthu"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
-				<td class='canhgiua'>".date("d/m/Y", strtotime($row_bienlai['ngay_tinhbienlai']))."</td>
+				<td class='canhgiua'>".date("d/m/Y H:i:s", strtotime($row_bienlai['ngay_tinhbienlai']))."</td>
 
 				";?>
 				
