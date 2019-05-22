@@ -41,11 +41,11 @@ $(document).ready(function () {
 			success:function(data_sua_index_phong){
 				var gia_gio= FormatNumber(data_sua_index_phong.gia_phong_gio);
 				var gia_phong_ngay= FormatNumber(data_sua_index_phong.gia_phong_ngay);
-				$('#ma_index_phong_sua_12').val(data_sua_index_phong.ma_phong);// tt mssv
-				$('#idloai_phong_index_phong_sua_12').val(data_sua_index_phong.id_loai_phong);// thông tinh giới tính
-				$('#id_index_phong_sua_12').val(data_sua_index_phong.id);// id sửa tt sinnh vien
-				$('#gia_gio_index_phong_sua_12').val(gia_gio);// id sửa tt sinnh vien
-				$('#gia_ngay_ma_index_phong_sua_12').val(gia_phong_ngay);// id sửa tt sinnh vien
+				$('#ma_index_phong_sua_12').val(data_sua_index_phong.ma_phong);
+				$('#idloai_phong_index_phong_sua_12').val(data_sua_index_phong.id_loai_phong);
+				$('#id_index_phong_sua_12').val(data_sua_index_phong.id);
+				$('#gia_gio_index_phong_sua_12').val(gia_gio);
+				$('#gia_ngay_ma_index_phong_sua_12').val(gia_phong_ngay);
 				$('#insert').val("Thuê");
 				$('#modal_sua_index_phong').modal('show');
 			}
@@ -79,7 +79,8 @@ $(document).ready(function () {
 							$('#tt_khachthue').html("");
 		          		}else if (kql_update_index_phong==99) {
 								alert('Cập nhật phòng mới thành công');
-								$('#form_themindex_phongmoi')[0].reset();
+								$('#from_suathongtin_index_phong')[0].reset();
+								$('#from_suathongtin_index_phong').modal('hide');
 								location.reload();
 						}else {
 								alert('Lỗi Thêm');

@@ -3,7 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en"><head>
-	<title> Hệ thông KTX ĐH Kiên Giang </title>
+	<title> Hệ Thống Quản Lý Khách Sạn </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <link rel="shortcut icon" type="image/jpg" href="./../images/vnkgu.png"/> -->
@@ -24,7 +24,7 @@
 			<div class="container-fluid">
 				<div class="row anhbia  text-center">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<img class="img-responsive" src="../images/Capture.PNG" alt="">
+						<img class="img-responsive" src="../images/QLKSM.png" alt="">
 					</div>
 					
 				</div>
@@ -38,7 +38,7 @@
 					<div class="container-fluid" style="padding: 0px;">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 chutieude">
-								<h2>Hệ thống quản lý</h2>
+								<h2>Danh sách phòng</h2>
 							</div>
 						</div>
 					<hr class="ngay_ad"></div>
@@ -84,7 +84,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">thông tin thuê phòng</h4>
+						<h4 class="modal-title">Thông tin thuê phòng</h4>
 					</div>
 					<div class="modal-body">
 						<form action="" id="from_suathongtin_index_phong" name="from_suathongtin_index_phong" 	method="POST" role="form" class="_1themphong1 " enctype="multipart/form-data" data-confirm="Bạn có chắn muốn thêm thông tin này?">
@@ -170,7 +170,7 @@
 							</div>
 						</div>
 						<form method="post" id="From_xoa_index_phong" data-confirm="Bạn có chắn muốn tính tiền phòng này?">
-							<input type="" name="id_index_phong_xoa_12" id="id_index_phong_xoa_12" />
+							<input type="hidden" name="id_index_phong_xoa_12" id="id_index_phong_xoa_12" />
 							<div class="modal-footer">
 								<input type="submit" name="insert_xoa" id="insert_xoa" value="Trả phòng" class="btn btn-danger canhgiua" />
 								<button type="button" class="btn btn-primary" data-dismiss="modal">Trở lại</button>

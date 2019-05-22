@@ -14,13 +14,13 @@ if (isset($_POST['id_chitietindex_phong'])) {
 				<th class='canhgiua' >STT</th>
 				<th class='canhgiua'>Phòng</th>
 				<th class='canhgiua'>Time vào</th>
-				<th class='canhgiua'>Mã KH</th>
-				<th class='canhgiua' style="width: 100px;">Tên KH</th>
+				<th class='canhgiua'>Mã khách hàng</th>
+				<th class='canhgiua' style="width: 100px;">Tên khách hàng</th>
 				<th class='canhgiua'>Ngày sinh</th>
 				<th class='canhgiua'>Giới tính</th>
 				<th class='canhgiua'>CMND</th>
-				<th class='canhgiua canhgiua hidden'>HKTT</th>
-				<th class='canhgiua'>Điện thoại
+				<th class='canhgiua canhgiua hidden'>Hộ khẩu thường trú</th>
+				<th class='canhgiua'>Điện thoại</th>
 				
 			</tr>
 		</thead>

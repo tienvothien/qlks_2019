@@ -10,14 +10,14 @@ include 'conn.php';
 	<table class="table table-hover table-bordered table-striped" id="myTable">
 		<thead>
 			<tr>
-				<th >STT</th>
-				<th>MSSV</th>
-				<th style="width: 100px;">Tên Sinh viên</th>
+				<th>STT</th>
+				<th>Mã khách hàng</th>
+				<th style="width: 100px;">Tên khách hàng</th>
 				<th>Ngày sinh</th>
 				<th>Giới tính</th>
 				<th>CMND</th>
-				<th class='canhgiua'>HKTT</th>
-				<th>Điện thoại
+				<th class='canhgiua'>Hộ khẩu thường chú</th>
+				<th>Điện thoại</th>
 				<th>Sửa</th>
 				<th>Chi tiết</th>
 				<th>Xóa</th>

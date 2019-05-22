@@ -39,11 +39,11 @@
 						<a href="quanlylop.php" class="list-group-item">Quản lý vị trí</a>
 					</div>
 					<?php } ?>
-					<button class="dropdown-btn">Quản lý khách
+					<button class="dropdown-btn">Quản lý khách hàng
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="quanly_thongtin_khach.php" class="list-group-item">Thông tin khác</a>
+						<a href="quanly_thongtin_khach.php" class="list-group-item">Thông tin khách hàng</a>
 					</div>
 					<button class="dropdown-btn">Quản lý phòng
 					<i class="fa fa-caret-down"></i>
@@ -61,6 +61,20 @@
 					<div class="dropdown-container">
 						<a href="quanly_thongtin_thutien.php" class="list-group-item">Quản lý Tiền</a>
 					</div>
+					<button class="dropdown-btn">Quản lý thiết bị
+					<i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-container">
+						<a href="quanly_thietbi.php" class="list-group-item">Danh sách thiết bị</a>
+						<a href="#" class="list-group-item">Danh sách thiết bị trong từng loại phòng</a>
+					</div>
+					<button class="dropdown-btn">Thống kê
+					<i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-container">
+						<a href="thongke.php" class="list-group-item">Thống kê danh sách</a>
+					</div>
+					
 					
 				</div>
 			</div>
