@@ -3,7 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en"><head>
-	<title> Hệ thông KTX ĐH Kiên Giang </title>
+	<title> Quản lý tài khoản </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <link rel="shortcut icon" type="image/jpg" href="./../images/vnkgu.png"/> -->
@@ -22,7 +22,7 @@
 			<div class="container-fluid">
 				<div class="row anhbia  text-center">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<img class="img-responsive" src="../images/Capture.PNG" alt="">
+						<img class="img-responsive" src="../images/QLKSM.png" alt="">
 					</div>
 					
 				</div>
@@ -36,7 +36,7 @@
 					<div class="container-fluid" style="padding: 0px;">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 chutieude">
-								<h2>thông tin tài khoản</h2>
+								<h2>Thông tin tài khoản</h2>
 							</div>
 						</div>
 					<hr class="ngay_ad"></div>

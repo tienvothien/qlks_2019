@@ -32,6 +32,7 @@ if (isset($_POST['tim_doanhthu_ngaybd'])) {
 				<th class='canhgiua'>Tiền ngày <br> (VNĐ)</th>
 				<th class='canhgiua'>Phụ thu <br> (VNĐ)</th>
 				<th class='canhgiua'>Ngày tính</th>
+				<th class='canhgiua'>Nhân viên</th>
 				
 			</tr>
 		</thead>
@@ -43,6 +44,7 @@ if (isset($_POST['tim_doanhthu_ngaybd'])) {
 				$tongdoanhthu+=$row_bienlai['tongtien'];
 				$tongthungay+=$row_bienlai['tienngay'];
 				$tongphuthu+=$row_bienlai['tienphuthu'];
+				$row_1 = mysqli_fetch_array(mysqli_query($conn,"SELECT nhanvien.ten_nhan_vien, nhanvien.ho_nhan_vien, nhanvien.ma_nhan_vien FROM nhanvien WHERE nhanvien.id=$row_bienlai[id_nguoi_tinh]"));
 			echo "
 				<td style='text-align:center;'>$stt</td>
 				<td class='chuinhoa canhgiua'>$row_bienlai[ma_phong]</td>
@@ -50,7 +52,8 @@ if (isset($_POST['tim_doanhthu_ngaybd'])) {
 				<td class='chuinthuong canhgiua'> ". number_format ($row_bienlai["tienngay"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 				<td class='chuinthuong canhgiua'> ". number_format ($row_bienlai["tienphuthu"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 				<td class='canhgiua'>".date("d/m/Y H:i:s", strtotime($row_bienlai['ngay_tinhbienlai']))."</td>
-
+				
+				<td class='canhgiua'> $row_1[ho_nhan_vien] $row_1[ten_nhan_vien]</td>
 				";?>
 				
 				<?php echo "
