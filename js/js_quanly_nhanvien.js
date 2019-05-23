@@ -262,7 +262,7 @@ $(document).ready(function () {
 				data:{id_xoa_nhan_vien123:id_xoa_nhan_vien123},
 				success:function(kq_xoa_nhan_vien){
 					if (kq_xoa_nhan_vien==99) {
-						alert('Xóa nhân viên thành công công');
+						alert('Xóa nhân viên thành công');
 						$('#From_xoa_nhan_vien')[0].reset();
 						$('#modal_xoa_nhan_vien').modal('hide');
 						// $('#dulieunhan_vien').load("./../dulieu/dulieunhan_vien.php")
@@ -286,10 +286,10 @@ $(document).ready(function () {
 				alert("Bạn phải chọn file ảnh có đuôi là (jpeg, jpg and png)");
 		}else{
 			if ($('#cmnd_them_nhan_vien').val().length!=9) {
-				alert('Chứ minh nhân dân phải 9 chữ số');
+				alert('Chứ minh nhân dân phải đủ 9 chữ số');
 				document.getElementById('cmnd_them_nhan_vien').focus();
 			}else if ($('#so_dt_them_nhan_vien').val().length!='' &&($('#so_dt_them_nhan_vien').val().length!=10 || $('#so_dt_them_nhan_vien').val().slice(0, 1)!=0)) {
-				alert('Số điện thoại phải 10 số và bất đầu là số "0" và bất đầu là số "0"');
+				alert('Số điện thoại phải 10 số và bất đầu là số "0"');
 				document.getElementById('so_dt_them_nhan_vien').focus();
 			}else {
 				$.ajax({
@@ -301,10 +301,10 @@ $(document).ready(function () {
 					processData:false,
 					success:function (kql_add_nhan_vien) {
 						 if (kql_add_nhan_vien==6) {
-		          			alert('Số CMND nhân viên đã tồn tạo');
+		          			alert('Số CMND nhân viên đã tồn tại');
 							document.getElementById("cmnd_them_nhan_vien").focus();
 		          		}else if (kql_add_nhan_vien==2) {
-		          			alert('Số điện thoại nhân viên đã tồn tạo');
+		          			alert('Số điện thoại nhân viên đã tồn tại');
 							document.getElementById("so_dt_them_nhan_vien").focus();
 		          		}else if (kql_add_nhan_vien==99) {
 								alert('Thêm nhân viên mới thành công');

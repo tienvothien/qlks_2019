@@ -53,7 +53,7 @@ $(document).ready(function () {
 					processData:false,
 					success:function (kql_update_gia_phong) {
 						if (kql_update_gia_phong==6) {
-		          			alert('Tên giá phòng đã tồn tạo');
+		          			alert('Tên giá phòng đã tồn tại');
 							document.getElementById("ten_gia_phong_sua_12").focus();
 		          		}else if (kql_update_gia_phong==1) {
 		          			alert('Giá phòng giờ phải lớn hơn 50,000 VNĐ');
@@ -104,7 +104,7 @@ $(document).ready(function () {
 				data:{id_xoa_gia_phong123:id_xoa_gia_phong123},
 				success:function(kq_xoa_gia_phong){
 					if (kq_xoa_gia_phong==99) {
-						alert('Xóa giá phòng thành công công');
+						alert('Xóa giá phòng thành công');
 						$('#From_xoa_gia_phong')[0].reset();
 						$('#modal_xoa_gia_phong').modal('hide');
 						// $('#dulieugia_phong').load("./../dulieu/dulieugia_phong.php")
@@ -131,7 +131,7 @@ $(document).ready(function () {
 					processData:false,
 					success:function (kql_add_gia_phong) {
 						 if (kql_add_gia_phong==6) {
-		          			alert('Tên giá phòng đã tồn tạo');
+		          			alert('Tên giá phòng đã tồn tại');
 							document.getElementById("ten_gia_phongthemmoi_12").focus();
 		          		}else if (kql_add_gia_phong==1) {
 		          			alert('Giá phòng giờ phải lớn hơn 50,000 VNĐ');

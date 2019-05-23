@@ -67,7 +67,7 @@ $(document).ready(function () {
 					processData:false,
 					success:function (kql_update_index_phong) {
 						if (kql_update_index_phong==6) {
-		          			alert('Số CMND không tồn tạo');
+		          			alert('Số CMND không tồn tại');
 							document.getElementById("cmnd_index_phong_sua_12").focus();
 		          		}else if (kql_update_index_phong==1) {
 		          			alert('Lỗi vì Phòng đầy');

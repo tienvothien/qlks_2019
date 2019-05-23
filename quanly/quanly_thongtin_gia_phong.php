@@ -47,7 +47,7 @@
 							<div class="dulieu_giaphong"><?php include './../dulieu/dulieu_gia_phong.php'; ?></div>
 						</div>
 						<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-							<input type="button" class="btn btn-basic btn-block" name="them_gia_phong" value="Thêm mới" data-toggle="modal" data-target="#them_gia_phong1">
+							<input type="button" class="btn btn-basic btn-block gia" name="them_gia_phong" value="Thêm mới" data-toggle="modal" data-target="#them_gia_phong1">
 						</div>
 						</div><!-- end thaydoi1 -->
 						</div><!-- end noidungthaydoi -->

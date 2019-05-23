@@ -54,7 +54,7 @@ $(document).ready(function () {
 					success:function (kql_update_loai_phong) {
 						// alert(kql_update_loai_phong);
 						if (kql_update_loai_phong==6) {
-			       			alert('Tên Loại phòng đã tồn tạo');
+			       			alert('Tên Loại phòng đã tồn tại');
 							document.getElementById("ten_loai_phong_sua_12").focus();
 			       		}else if (kql_update_loai_phong==99) {
 							alert('Cập nhật thông tin Loại phòng mới thành công');
@@ -65,7 +65,7 @@ $(document).ready(function () {
 						}else if (kql_update_loai_phong==88) {
 							alert('Bạn phải chọn file ảnh');
 						}else{
-							alert('Lỗi Cập nhật thông tin');
+							alert('Lỗi cập nhật thông tin');
 						}
 						// alert(kql_update_loai_phong);
 			          		
@@ -103,13 +103,13 @@ $(document).ready(function () {
 				data:{id_xoa_loai_phong123:id_xoa_loai_phong123},
 				success:function(kq_xoa_loai_phong){
 					if (kq_xoa_loai_phong==99) {
-						alert('Xóa Loại phòng thành công công');
+						alert('Xóa loại phòng thành công');
 						$('#From_xoa_loai_phong')[0].reset();
 						$('#modal_xoa_loai_phong').modal('hide');
 						// $('#dulieuloai_phong').load("./../dulieu/dulieuloai_phong.php")
 						location.reload();
 					}else {
-						alert('Lỗi xóa Loại phòng');
+						alert('Lỗi xóa loại phòng');
 					}
 					// alert(kq_xoa_loai_phong);
 				}
@@ -129,14 +129,14 @@ $(document).ready(function () {
 					processData:false,
 					success:function (kql_add_loai_phong) {
 						 if (kql_add_loai_phong==6) {
-		          			alert('Tên Loại phòng đã tồn tạo');
+		          			alert('Tên Loại phòng đã tồn tại');
 							document.getElementById("ten_loai_phongthemmoi_12").focus();
 		          		}else if (kql_add_loai_phong==99) {
 								alert('Thêm Loại phòng mới thành công');
 								$('#form_themloai_phongmoi')[0].reset();
 								location.reload();
 						}else {
-								alert('Lỗi Thêm');
+								alert('Lỗi Thêm loại phòng');
 						}
 		          		// alert(kql_add_loai_phong);
 					}

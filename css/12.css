@@ -60,6 +60,7 @@ hr.ngay_ad {
 h2 {
     margin-top: 3px;
     margin-bottom: 3px;
+    margin-left: 14px;
 }
 
 .navbar-default .navbar-brand {
@@ -91,11 +92,11 @@ h2 {
 /* Fixed sidenav, full height */
 .sidenav ,.menutrai nav.navbar.navbar-default{
   height: 100%;
-  width: 100%;
+  width: 98%;
   /* position: fixed; */
   z-index: 1;
   top: 0;
-  left: 0;
+  left: 15px;
   background-color: #e2e2e2;
   overflow-x: hidden;
   /* padding-top: 20px; */
@@ -160,7 +161,7 @@ img.img-responsive {
     height: 300px;
 }
 .thumbnail.maune_hethong {
-    background-color: #ff4a8a;
+    background-color: #fc0000;
 }
 .caption.text-center {
     font-size: 20px;
@@ -188,10 +189,53 @@ img.img-responsive {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+   
 }
 
 button.btn.btn-info.btn-lg.nutthemnek.themtb {
     width: 150px;
-    font-size: 15px;
-    background-color: #c0b4b4;
+    font-size: 13px;
+    background-color: #3d50bc;
+}
+.sidenav, .menutrai nav.navbar.navbar-default {
+    height: 100%;
+    width: 100%;
+    /* position: fixed; */
+    z-index: 1;
+    top: 0;
+    left: 15px;
+    background-color: #e2e2e2;
+    overflow-x: hidden;
+    /* padding-top: 20px; */
+}
+h2 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 14px;
+}
+input.btn.btn-basic.btn-block.gia {
+    background-color: #1e74be;
+}
+button.btn.btn-primary.timkiem {
+    width: 100px;
+    font-size: 13px;
+}
+input.btn.btn-basic.btn-block {
+    background-color: #2e7fc0;
+}
+button.btn.btn-info.btn-lg.nutthemnek.themtb {
+    width: 150px;
+    font-size: 13px;
+    background-color: #3d50bc;
+}
+button.btn_xoatb {
+    background-color: #fc0000;
+}
+button.capnhattb2323 {
+    background-color: #5cb85c;
+}
+.btn-default {
+    color: #333;
+    background-color: #e3473c;
+    border-color: #ccc;
 }

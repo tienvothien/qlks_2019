@@ -48,7 +48,7 @@ $(document).ready(function () {
 					processData:false,
 					success:function (kql_update_1_phong) {
 						if (kql_update_1_phong==6) {
-		          			alert('Số phòng đã tồn tạo');
+		          			alert('Mã phòng đã tồn tại');
 							document.getElementById("ma_1_phong_sua_12").focus();
 		          		}else if (kql_update_1_phong==99) {
 								alert('Cập nhật phòng mới thành công');
@@ -93,7 +93,7 @@ $(document).ready(function () {
 				data:{id_xoa_1_phong123:id_xoa_1_phong123},
 				success:function(kq_xoa_1_phong){
 					if (kq_xoa_1_phong==99) {
-						alert('Xóa phòng thành công công');
+						alert('Xóa phòng thành công');
 						$('#From_xoa_1_phong')[0].reset();
 						$('#modal_xoa_1_phong').modal('hide');
 						// $('#dulieu1_phong').load("./../dulieu/dulieu1_phong.php")
@@ -120,7 +120,7 @@ $(document).ready(function () {
 					processData:false,
 					success:function (kql_add_1_phong) {
 						 if (kql_add_1_phong==6) {
-		          			alert('Số phòng đã tồn tạo');
+		          			alert('Số phòng đã tồn tại');
 							document.getElementById("ma_1_phong_themmoi123").focus();
 		          		}else if (kql_add_1_phong==99) {
 								alert('Thêm phòng mới thành công');

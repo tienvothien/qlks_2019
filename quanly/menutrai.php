@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<a href="index.php" class="navbar-brand "><span class="fa fa-home"></span> Trang chủ</a>
+				<a href="thongke.php" class="navbar-brand "><span class="fa fa-home"></span> Trang chủ</a>
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<div class="sidenav">
@@ -25,7 +25,7 @@
 					<i class=" fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="quanly_thongtintaikhoang.php" class="list-group-item">Quản lý tài khoản</a>
+						<a href="quanly_thongtintaikhoang.php" class="list-group-item">Quản Lý Tài khoản</a>
 						<a href="../dulieu/dangxuat.php"><span class="fa fa-log-in"></span> Đăng xuất</a>
 					</div>
 					<?php if ($_SESSION['idnv']==2) {
@@ -36,44 +36,45 @@
 					</button>
 					<div class="dropdown-container">
 						<a href="quanly_nhanvien.php" class="list-group-item">Thông tin nhân viên</a>
-						<a href="quanlylop.php" class="list-group-item">Quản lý vị trí</a>
 					</div>
 					<?php } ?>
-					<button class="dropdown-btn">Quản lý khách hàng
+					<button class="dropdown-btn">Quản Lý Khách Hàng
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="quanly_thongtin_khach.php" class="list-group-item">Thông tin khách hàng</a>
+						<a href="quanly_thongtin_khach.php" class="list-group-item">Thông Tin Khách Hàng</a>
 					</div>
 					<button class="dropdown-btn">Quản lý phòng
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
+						<a href="index.php" class="list-group-item">Danh Sách Phòng</a>
 						<a href="quanly_thongtin_gia_phong.php" class="list-group-item">Giá Phòng</a>
-						<a href="quanly_thongtin_phong.php" class="list-group-item">Thông tin Phòng</a>
-						<a href="quanly_thongtin_loai_phong.php" class="list-group-item">Quản lý Loại phòng</a>
-						<a href="quanly_thongtin_dathue.php" class="list-group-item">Quản Đã thuê</a>
-						<a href="quanly_thongtin_dangthue.php" class="list-group-item">Quản Đang thuê</a>
+						<a href="quanly_thongtin_phong.php" class="list-group-item">Thông Tin Phòng</a>
+						<a href="quanly_thongtin_loai_phong.php" class="list-group-item">Quản Lý Loại Phòng</a>
+						<a href="quanly_thongtin_dathue.php" class="list-group-item">Quản Lý Khách Đã Thuê Phòng</a>
+						<a href="quanly_thongtin_dangthue.php" class="list-group-item">Quản Lý Khách Đang Thuê Phòng</a>
 					</div>
-					<button class="dropdown-btn">Quản lý Thu
+					<button class="dropdown-btn">Quản lý Thiết Bị
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="quanly_thongtin_thutien.php" class="list-group-item">Quản lý Tiền</a>
+						<a href="quanly_thietbi.php" class="list-group-item">Danh Sách Thiết Bị</a>
+						<a href="#" class="list-group-item">Quản Lý Thiết Bị Trong Từng Loại Phòng</a>
 					</div>
-					<button class="dropdown-btn">Quản lý thiết bị
+					<button class="dropdown-btn">Quản Lý Hóa Đơn
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="quanly_thietbi.php" class="list-group-item">Danh sách thiết bị</a>
-						<a href="#" class="list-group-item">Danh sách thiết bị trong từng loại phòng</a>
+						<a href="quanly_thongtin_thutien.php" class="list-group-item">Quản Lý Tiền</a>
 					</div>
-					<button class="dropdown-btn">Thống kê
+					
+					<!-- <button class="dropdown-btn">Thống kê
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="thongke.php" class="list-group-item">Thống kê danh sách</a>
-					</div>
+						<a href="" class="list-group-item">Thống kê danh sách</a>
+					</div> -->
 					
 					
 				</div>

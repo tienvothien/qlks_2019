@@ -31,7 +31,7 @@ $(document).ready(function () {
 		$('#cmnd_them_khach_hang').change(function() {
 			var cmnd_them_khach_hang=$('#cmnd_them_khach_hang').val();
 			if (cmnd_them_khach_hang.length!=9) {
-				alert('Số chứng minh nhân dân phải 9 chữ số');
+				alert('Số chứng minh nhân dân phải đủ 9 chữ số');
 				document.getElementById('cmnd_them_khach_hang').focus();
 			}
 		});//end  nêu CMND thay đổi sẽ  chọn xã thay đổi
@@ -148,7 +148,7 @@ $(document).ready(function () {
 			event.preventDefault();
 		}else{
 			if ($('#cmnd_khach_hang_sua_12').val().length!=9) {
-				alert('Chứ minh nhân dân phải 9 chữ số');
+				alert('Chứng minh nhân dân phải đủ 9 chữ số');
 				document.getElementById('cmnd_khach_hang_sua_12').focus();
 			}else if ( $('#so_dt_khach_hang_sua_12').val().length!='' && ($('#so_dt_khach_hang_sua_12').val().length!=10 || document.getElementById('so_dt_khach_hang_sua_12').value.slice(0, 1)!=0)) {
 				alert('Số điện thoại khách hàng phải 10 số và bất đầu là số "0"');
@@ -164,10 +164,10 @@ $(document).ready(function () {
 					success:function (kql_update_khach_hang) {
 						// alert(kql_update_khach_hang);
 						if (kql_update_khach_hang==6) {
-			       			alert('Số CMND khách hàng đã tồn tạo');
+			       			alert('Số CMND khách hàng đã tồn tại');
 							document.getElementById("cmnd_khach_hang_sua_12").focus();
 			       		}else if (kql_update_khach_hang==2) {
-			       			alert('Số điện thoại khách hàng đã tồn tạo');
+			       			alert('Số điện thoại khách hàng đã tồn tại');
 							document.getElementById("so_dt_khach_hang_sua_12").focus();
 			       		}else if (kql_update_khach_hang==99) {
 							alert('Cập nhật thông tin khách hàng mới thành công');
@@ -216,7 +216,7 @@ $(document).ready(function () {
 				data:{id_xoa_khach_hang123:id_xoa_khach_hang123},
 				success:function(kq_xoa_khach_hang){
 					if (kq_xoa_khach_hang==99) {
-						alert('Xóa khách hàng thành công công');
+						alert('Xóa khách hàng thành công');
 						$('#From_xoa_khach_hang')[0].reset();
 						$('#modal_xoa_khach_hang').modal('hide');
 						// $('#dulieukhach_hang').load("./../dulieu/dulieukhach_hang.php")
@@ -235,10 +235,10 @@ $(document).ready(function () {
 		event.preventDefault();
 		
 			if ($('#cmnd_them_khach_hang').val().length!=9) {
-				alert('Chứ minh nhân dân phải 9 chữ số');
+				alert('Chứng minh nhân dân phải đủ 9 chữ số');
 				document.getElementById('cmnd_them_khach_hang').focus();
 			}else if ($('#so_dt_them_khach_hang').val().length!='' &&($('#so_dt_them_khach_hang').val().length!=10 || $('#so_dt_them_khach_hang').val().slice(0, 1)!=0)) {
-				alert('Số điện thoại phải 10 số và bất đầu là số "0" và bất đầu là số "0"');
+				alert('Số điện thoại phải 10 số và bất đầu là số "0"');
 				document.getElementById('so_dt_them_khach_hang').focus();
 			}else {
 				$.ajax({
@@ -250,10 +250,10 @@ $(document).ready(function () {
 					processData:false,
 					success:function (kql_add_khach_hang) {
 						 if (kql_add_khach_hang==6) {
-		          			alert('Số CMND khách hàng đã tồn tạo');
+		          			alert('Số CMND khách hàng đã tồn tại');
 							document.getElementById("cmnd_them_khach_hang").focus();
 		          		}else if (kql_add_khach_hang==2) {
-		          			alert('Số điện thoại khách hàng đã tồn tạo');
+		          			alert('Số điện thoại khách hàng đã tồn tại');
 							document.getElementById("so_dt_them_khach_hang").focus();
 		          		}else if (kql_add_khach_hang==99) {
 								alert('Thêm khách hàng mới thành công');

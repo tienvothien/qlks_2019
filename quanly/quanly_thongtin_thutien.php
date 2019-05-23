@@ -37,7 +37,7 @@
 					<div class="container-fluid" style="padding: 0px;">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 chutieude">
-								<h2>Quản lý thông tin lợi nhuận</h2>
+								<h2>Quản lý thông tin hóa đơn</h2>
 							</div>
 						</div>
 					<hr class="ngay_ad"></div>
@@ -71,7 +71,7 @@
 									</select>
 								</div>
 								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-									<button type="submit" name="tim_doanhthu_nut" class="btn btn-primary">Tìm</button>
+									<button type="submit" name="tim_doanhthu_nut" class="btn btn-primary timkiem">Tìm</button>
 									
 								</div>
 							</form>

@@ -36,7 +36,7 @@
 					<div class="container-fluid" style="padding: 0px;">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 chutieude">
-								<h2>Quản lý thông tin khách ở</h2>
+								<h2>Quản lý thông tin khách hàng đã ở</h2>
 							</div>
 						</div>
 					<hr class="ngay_ad"></div>

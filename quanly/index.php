@@ -127,7 +127,7 @@
 								<input style="" type="text" name="" id="" class="form-control  " value="<?php echo date("H:i:s d/m/Y"); ?>"  required=""  disabled="" />
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hoten_cb_sua ">
-								<label>Thông tin khác thuê</label>
+								<label>Thông tin khách thuê phòng</label>
 								<div id="tt_khachthue">
 									
 								</div>
@@ -157,7 +157,7 @@
 							<div id="thongtinnv_xoa12">	</div>
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									<h4 class="text-center">Thông phòng</h4>
+									<h4 class="text-center">Thông tin phòng</h4>
 									<div id="tt_loaiphong">
 									</div>
 								</div>
@@ -172,7 +172,7 @@
 						<form method="post" id="From_xoa_index_phong" data-confirm="Bạn có chắn muốn tính tiền phòng này?">
 							<input type="hidden" name="id_index_phong_xoa_12" id="id_index_phong_xoa_12" />
 							<div class="modal-footer">
-								<input type="submit" name="insert_xoa" id="insert_xoa" value="Trả phòng" class="btn btn-danger canhgiua" />
+								<input type="submit" name="insert_xoa" id="insert_xoa" value="Thanh toán" class="btn btn-danger canhgiua" />
 								<button type="button" class="btn btn-primary" data-dismiss="modal">Trở lại</button>
 							</div>
 						</form>

@@ -32,7 +32,7 @@ include 'conn.php';
 							<p>
 								<input style="width:30%; " type="button" name="edit" value="Thuê" id="<?php echo $row_phong['id']; ?>" class="btn btn-success id_sua_thuephong" />
 								<input style="width:30%; " type="button" name="view" value="Xem" id="<?php echo $row_phong['id']; ?>" class="btn btn-warning view_chitietthuephong" />
-								<input style="width:30%; " type="button" name="delete" value="Tiền" id="<?php echo $row_phong['id']; ?>" class="btn btn-info btn-danger xoa_thuephong" />
+								<input style="width:30%; " type="button" name="delete" value="Trả Phòng" id="<?php echo $row_phong['id']; ?>" class="btn btn-info btn-danger xoa_thuephong" />
 							</p>
 						</div>
 					</div>

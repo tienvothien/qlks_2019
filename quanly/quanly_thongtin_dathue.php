@@ -70,7 +70,7 @@
 									</select>
 								</div>
 								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-									<button type="submit" name="tim_dathue_nut" class="btn btn-primary">Tìm</button>
+									<button type="submit" name="tim_dathue_nut" class="btn btn-primary timkiem">Tìm</button>
 									
 								</div>
 							</form>
