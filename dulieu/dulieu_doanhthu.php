@@ -33,7 +33,6 @@ if (isset($_POST['tim_doanhthu_ngaybd'])) {
 				<th class='canhgiua'>Phụ thu <br> (VNĐ)</th>
 				<th class='canhgiua'>Ngày tính</th>
 				<th class='canhgiua'>Nhân viên</th>
-				
 			</tr>
 		</thead>
 		<tbody>
@@ -68,7 +67,7 @@ if (isset($_POST['tim_doanhthu_ngaybd'])) {
 				<td class='canhgiua'>". number_format ($tongdoanhthu , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 				<td class='canhgiua'>". number_format ($tongthungay , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 				<td class='canhgiua'>". number_format ($tongphuthu , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
-				
+				<td class='canhgiua'></td>
 				<td class='canhgiua'></td>
 
 			</tr>

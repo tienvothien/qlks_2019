@@ -43,21 +43,116 @@
 					<div class="container-fluid">
 						<div class="row"><!-- nho doi ten class -->
 							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_thongtin_phong.php" title="">
 								<div class="thumbnail maune_hethong" >
 	                               	<div class='caption text-center'>
 	                                    <?php  include './../dulieu/tong_so_phong.php'?>
 	                                </div>
 	                            </div>
+	                            </a>
 							</div>
 
 							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_thongtin_loai_phong.php" title="">
 								<div class="thumbnail maune_lp" >
 	                               	<div class='caption text-center'>
 	                                    <?php  include './../dulieu/tong_so_loai_phong.php'?>
 	                                </div>
 	                            </div>
+	                            </a>
 							</div>
 						
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="index.php" title="">
+									<div class="thumbnail maune_phongcokhach" >
+		                               	<div class='caption text-center'>
+		                                    <?php  include './../dulieu/tong_so_phong_co_khachhang.php'?>
+		                                </div>
+		                            </div>
+	                        	</a>
+							</div>
+						
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="index.php" title="">
+								<div class="thumbnail maune_phongtrong" >
+	                               	<div class='caption text-center'>
+	                                    <?php  include './../dulieu/tong_so_phong_trong.php'?>
+	                                </div>
+	                            </div>
+	                            </a>
+							</div>
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_thongtin_thutien.php" title="">
+								<div class="thumbnail maune_hoadon" >
+	                               	<div class='caption text-center'>
+	                                    <?php  include './../dulieu/tong_so_hoa_don.php'?>
+	                                </div>
+	                            </div>
+	                            </a>
+							</div>
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_nhanvien.php" title="">
+								<div class="thumbnail maune_nhanvien" >
+	                               	<div class='caption text-center'>
+	                                    <?php  include './../dulieu/tong_so_nhan_vien.php'?>
+	                                </div>
+	                            </div>
+	                            </a>
+							</div>
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_thietbi.php" title="">
+								<div class="thumbnail maune_loaithietbi" >
+	                               	<div class='caption text-center'>
+	                                    <?php  include './../dulieu/tong_so_loai_thiet_bi.php'?>
+	                                </div>
+	                            </div>
+	                            </a>
+							</div>
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_thongtin_phong.php" title="">
+								<div class="thumbnail maune_quatdoi" >
+	                               	<div class='caption text-center'>
+	                                    <?php  include './../dulieu/tong_so_phong_quat_doi.php'?>
+	                                </div>
+	                            </div>
+	                            </a>
+							</div>
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_thongtin_phong.php" title="">
+								<div class="thumbnail maune_quatdon" >
+	                               	<div class='caption text-center'>
+	                                    <?php  include './../dulieu/tong_so_phong_quat_don.php'?>
+	                                </div>
+	                            </div>
+	                            </a>
+							</div>
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_thongtin_phong.php" title="">
+								<div class="thumbnail maune_lanhdon" >
+	                               	<div class='caption text-center'>
+	                                    <?php  include './../dulieu/tong_so_phong_lanh_don.php'?>
+	                                </div>
+	                            </div>
+	                            </a>
+							</div>
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_thongtin_phong.php" title="">
+								<div class="thumbnail maune_vipdoi" >
+	                               	<div class='caption text-center'>
+	                                    <?php  include './../dulieu/tong_so_phong_vip_doi.php'?>
+	                                </div>
+	                            </div>
+	                            </a>
+							</div>
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_thongtin_phong.php" title="">
+								<div class="thumbnail maune_vipdon" >
+	                               	<div class='caption text-center'>
+	                                    <?php  include './../dulieu/tong_so_phong_vip_don.php'?>
+	                                </div>
+	                            </div>
+	                            </a>
+							</div>
 						</div><!-- end thaydoi1 -->
 						</div><!-- end noidungthaydoi -->
 						</div> <!-- end col-9 -->

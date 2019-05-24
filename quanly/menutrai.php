@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<a href="thongke.php" class="navbar-brand "><span class="fa fa-home"></span> Trang chủ</a>
+				<a href="index.php" class="navbar-brand "><span class="fa fa-home"></span> Trang chủ</a>
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<div class="sidenav">
@@ -69,12 +69,12 @@
 						<a href="quanly_thongtin_thutien.php" class="list-group-item">Quản Lý Tiền</a>
 					</div>
 					
-					<!-- <button class="dropdown-btn">Thống kê
+					<button class="dropdown-btn">Thống kê
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
-						<a href="" class="list-group-item">Thống kê danh sách</a>
-					</div> -->
+						<a href="thongke.php" class="list-group-item">Thống kê danh sách</a>
+					</div>
 					
 					
 				</div>

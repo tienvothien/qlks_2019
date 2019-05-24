@@ -44,9 +44,21 @@
 						<div class="row"><!-- nho doi ten class -->
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<div class="dulieu_khachhang"><?php include './../dulieu/dulieu_dangthue.php'; ?></div>
-						</div>
+						<br>
+					</div>
 						<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
 							<input type="button" class="btn btn-primary btn-block" name="them_khach_hang" value="Thêm mới" data-toggle="modal" data-target="#them_khach_hang1">
+						</div>
+						<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+
+							<form action="./../dulieu/xuat_excel.php" id="" method="POST" role="form">
+							<div class="row text-center">
+									<div class=" khu12 col-xs-12 col-sm-2 col-md-2 col-lg-2 text-left">
+										<button type="submit" class="btn btn-info xuat_excel12" name="xuat_ds_kh_dang_thue12" id="xuat_excel12">Xuất Excel</button>
+									</div>
+								
+							</div>
+						</form>
 						</div>
 						</div><!-- end thaydoi1 -->
 						</div><!-- end noidungthaydoi -->

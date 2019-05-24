@@ -78,7 +78,7 @@ $(document).ready(function () {
 							$("#cmnd_index_phong_sua_12").val("");
 							$('#tt_khachthue').html("");
 		          		}else if (kql_update_index_phong==99) {
-								alert('Cập nhật phòng mới thành công');
+								alert('Thêm khách hàng vào phòng thành công');
 								$('#from_suathongtin_index_phong')[0].reset();
 								$('#from_suathongtin_index_phong').modal('hide');
 								location.reload();
