@@ -80,7 +80,7 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 						<div class="row">
-							<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+							<div style="margin-bottom: 50px;" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
 								<h4 class="modal-title">Thêm Khách hàng</h4>
 							</div>
 							

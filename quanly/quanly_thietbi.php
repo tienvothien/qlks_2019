@@ -46,8 +46,9 @@
 							<div class="dulieu_thietbi"><?php include './../dulieu/dulieu_thietbi.php'; ?></div>
 						</div>
 						<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-							<button type="button" class="btn btn-info btn-lg nutthemnek themtb" data-toggle="modal" data-target="#myModal">Thêm</button>
+							<button style="margin-bottom: 50px;" type="button" class="btn btn-info btn-lg nutthemnek themtb" data-toggle="modal" data-target="#myModal">Thêm</button>
 						</div>
+                       
 						</div><!-- end thaydoi1 -->
 						</div><!-- end noidungthaydoi -->
 						</div> <!-- end col-9 -->
@@ -86,7 +87,7 @@
                                             </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-default thietbi_tl" data-dismiss="modal">Trở lại</button>
                                             <button type="submit" class="btn btn-success  " onclick="themtb();">Thêm</button>
                                         </div>
                                     </div>

@@ -15,8 +15,8 @@ include 'conn.php';
 				<th class='canhgiua' style="width: 100px;">Tên loại phòng</th>
 				<th class='canhgiua'>Số Người <br> được ở</th>
 				<th class='canhgiua'>Diện tích <br>(m<sup>2</sup>)</th>
-				<th class='canhgiua'>Giá giờ <br> (VNĐ)</th>
-				<th class='canhgiua'>Giá ngày <br> (VNĐ)</th>
+				<!-- <th class='canhgiua'>Giá giờ <br> (VNĐ)</th>
+				<th class='canhgiua'>Giá ngày <br> (VNĐ)</th> -->
 				<th class='canhgiua'>Sửa</th>
 				<th class='canhgiua'>Chi tiết</th>
 				<th class='canhgiua'>Xóa</th>
@@ -37,8 +37,7 @@ include 'conn.php';
 				<td class='chuinthuong'> $row_loaiphong[ten_loai_phong]</td>
 				<td class='chuinthuong canhgiua'> $row_loaiphong[nguoi_o]</td>
 				<td class='chuinthuong canhgiua'> $row_loaiphong[dien_tich]</td>
-				<td class='chuinthuong canhgiua'> ". number_format ($giaphong['gia_phong_gio'] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
-				<td class='chuinthuong canhgiua'> ". number_format ($giaphong['gia_phong_ngay'] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
+				
 
 				";?>
 				<td class="canhgiua"><input type="button" name="edit" value="Sửa" id="<?php echo $row_loaiphong['id']; ?>" class="btn btn-success btn-xs id_sua_loaiphong" /></td>

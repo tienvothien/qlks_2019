@@ -56,6 +56,15 @@
 		$row = mysqli_fetch_array($result);
 		echo json_encode($row);
 	}//end
+	// hiên thông tin thiết bị cập nhật
+	if (isset($_POST["ma_thietbicapnhat"])) {
+		include 'conn.php';
+		$query = "SELECT * FROM loaithietbi WHERE loaithietbi.MA_LOAI_THIET_BI ='$_POST[ma_thietbicapnhat]'";
+		$result = mysqli_query($conn, $query);
+		$row = mysqli_fetch_array($result);
+		echo json_encode($row);
+	}//end
+	
 ?>
 	
 

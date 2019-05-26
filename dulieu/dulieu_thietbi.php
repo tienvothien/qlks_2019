@@ -30,7 +30,7 @@ include 'conn.php';
 				";?>
 				
 				 <td class="canhgiua">
-                    <button type="button" class="btn btn-info btn-lg1 capnhattb2323" id=" . $row['MA_LOAI_THIET_BI'] . ">Cập nhật</button>
+                    <button type="button" class="btn btn-info btn-lg1 capnhattb2323" id="<?php echo $row['MA_LOAI_THIET_BI']; ?>">Cập nhật</button>
                 </td>
                 <td class="canhgiua">
                     <button type="button" class="btn btn-info btn-lg1 btn_xoatb" id="<?php echo $row['MA_LOAI_THIET_BI']; ?>">Xóa</button>

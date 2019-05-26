@@ -22,7 +22,7 @@
 						<tr>
 							
 							<td colspan="4" style="text-transform: uppercase;">
-								<img src="./../images/'. $row["anhcanhan"].'" class="img-responsive" alt="Image" style="width:100px; margin: auto;">
+								<img src="./../images/'. $row["anhcanhan"].'" class="img-responsive" alt="Image" style="width:300px; height:250px; margin: auto;">
 							</td>
 						</tr>
 						<tr>

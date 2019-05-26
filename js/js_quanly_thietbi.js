@@ -50,6 +50,33 @@ function themtb(){
   }
 };
 
+//cập nhật thiets bị 
+$(document).ready(function () {   
+    $('#capnhatthietbi12345').on('submit', function (event) {
+        event.preventDefault();
+            // alert('msg');
+            var ma_thietbicapnhat12334=($('#ma_thietbicapnhat').val());
+            var ten_ltpcapnhat12345=($('#ten_ltpcapnhat').val());
+            $.ajax({
+              url: './../dulieu/update_thiet_bi.php',
+              type: 'POST',
+              data: {ma_thietbicapnhat12334: ma_thietbicapnhat12334,
+                ten_ltpcapnhat12345:ten_ltpcapnhat12345},
+              success:function (dulieudacapnhat) {
+                if (dulieudacapnhat==99) {
+                  alert('Cập nhật thành công');
+                  $('#thietbi_data_Modal').modal('hide');
+                  location.reload();
+
+                }else{
+                  alert('Lỗi cập nhật');
+                }
+            }
+        });
+     });
+});
+
+
  // xoa thiết bị
       $(document).on('click', '.btn_xoatb', function(){
 
@@ -70,8 +97,31 @@ function themtb(){
                 }
 
            });
-      });   
-      
+
+ });  
+
+ //cập nhật lại thông tin thiết bị 
+$(document).on('click', '.capnhattb2323', function(){
+           var ma_thietbicapnhat = $(this).attr("id");
+           // alert(ma_thietbicapnhat);
+           $.ajax({
+                url:"./../dulieu/fetch.php",
+                method:"POST",
+                data:{ma_thietbicapnhat:ma_thietbicapnhat},
+                dataType:"json",
+                success:function(data){
+                  // alert(data);
+                    $('#ma_thietbicapnhat').val(data.MA_LOAI_THIET_BI);
+                    $('#ten_ltpcapnhat').val(data.TEN_LOAI_THIET_BI);
+                    $('#ma_tbsua1').val(data.MA_LOAI_THIET_BI);
+                    
+                    $('#insert').val("Cập nhật");
+                    $('#thietbi_data_Modal').modal('show');
+                }
+           });
+      });      
+   
+
 // hiện thông báo khi bấm nút xóa
       $(document).on('submit', 'form[data-confirm]', function(e){
         var mathietbixoa123 = $('#ma_tb_canxoa12').val();

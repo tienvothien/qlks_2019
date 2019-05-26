@@ -216,7 +216,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- Cập nhật lại thông tin phòng -->
+		<!-- Cập nhật lại thông tin nhân viên -->
 		<div id="modal_sua_nhan_vien" class="modal fade">
 			<div class="modal-dialog ">
 				<div class="modal-content">
@@ -233,7 +233,7 @@
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua text-center">
 								<div id="message"></div>
 								<div id="image_preview_nhan_vien_sua123">
-									<img id="previewing_nhan_vien_sua123_load" class="img-responsive" style="width:100px;" rc="" />
+									<img id="previewing_nhan_vien_sua123_load" class="img-responsive" style="width:200px; height:150px; margin-top: 20px" rc="" />
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hoten_cb_sua ">
