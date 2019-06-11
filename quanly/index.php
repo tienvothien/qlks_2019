@@ -172,6 +172,7 @@
 						<form method="post" id="From_xoa_index_phong" data-confirm="Bạn có chắn muốn tính tiền phòng này?">
 							<input type="hidden" name="id_index_phong_xoa_12" id="id_index_phong_xoa_12" />
 							<div class="modal-footer">
+								<button type="button" class="btn btn-info xuat_ex_hoadon" name="xuat_ex_hoadon" id="xuat_ex_hoadon">Xuất Excel</button>
 								<input type="submit" name="insert_xoa" id="insert_xoa" value="Thanh toán" class="btn btn-danger canhgiua" />
 								<button type="button" class="btn btn-primary" data-dismiss="modal">Trở lại</button>
 							</div>

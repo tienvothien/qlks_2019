@@ -88,7 +88,7 @@
 					</div>
 					<!-- Modal body -->
 					<div class="modal-body _1themtoanha">
-						<form action="" id="form_themkhach_hangmoi" name="form_themkhach_hangmoi" 	method="POST" role="form" class="_1themphong1 "  enctype="multipart/form-data" data-confirm="Bạn có chắn muốn cập nhật lại thông tin này?">
+						<form action="" id="form_themkhach_hangmoi" name="form_themkhach_hangmoi" 	method="POST" role="form" class="_1themphong1 "  enctype="multipart/form-data" data-confirm="Bạn có chắc chắn muốn cập nhật lại thông tin này?">
 							<!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hoten_cb_sua">
 								<label>Ảnh</label>
 								<input id="file_anh_sv" type="file" accept="image/*" name="image12" required="" />

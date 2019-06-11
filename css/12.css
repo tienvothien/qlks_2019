@@ -198,6 +198,11 @@ img.img-responsive {
     border-radius: 4px;
 }
 
+button.xuat_ex_hoadon {
+    float: left;
+    width: 100px;
+}
+
 button.sua_tbphong {
     background-color: red;
     font-size: 13px;
@@ -334,7 +339,7 @@ h4.tenloaiphong {
     border: 1px solid;
 }
 .thumbnail.maune_12 {
-    background-color: #00BCD4;
+    background-color: #4ed8e9;
     /* color: red; */
     border: 1px solid;
 }
@@ -356,4 +361,14 @@ input.btn.btn-basic.btn-block.gia {
     color: white;
     height: 35px;
     font-size: 13px;
+}
+button.xuat_ex_hoadon {
+    float: left;
+    width: 100px;
+}
+table.myTable {
+    width: 1310px;
+}
+input.suathietbitrongtungloaiphong {
+    background-color: #3a3ab4;
 }

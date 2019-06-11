@@ -3,7 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en"><head>
-	<title> Quản lý thu chi </title>
+	<title> Quản lý hóa đơn </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <link rel="shortcut icon" type="image/jpg" href="./../images/vnkgu.png"/> -->
@@ -81,7 +81,8 @@
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<div class="dulieu_doanhthu" id="dulieu_doanhthu"><?php include './../dulieu/dulieu_doanhthu.php'; ?></div>
 						</div>
-					
+						<br>
+						<br>
 						</div><!-- end thaydoi1 -->
 						</div><!-- end noidungthaydoi -->
 						</div> <!-- end col-9 -->

@@ -7,12 +7,17 @@ if (isset($_POST['them_ma_tb'])) {
 	if (mysqli_num_rows($kt_matb)) {
 		echo "1";
 	} else {
-		// insert dữ liệu vào cơ sơ dữ liệu
-		$them_tb = "INSERT INTO loaithietbi (MA_LOAI_THIET_BI, TEN_LOAI_THIET_BI) VALUES ('$_POST[them_ma_tb]','$_POST[them_loai_tb]')";
-		if (mysqli_query($conn, $them_tb)) {
-			echo "99";
+		$kt_tentb = mysqli_query($conn, "SELECT * FROM loaithietbi WHERE TEN_LOAI_THIET_BI = '" . $_POST['them_loai_tb'] . "'");
+		if (mysqli_num_rows($kt_tentb)) {
+			echo "2";
 		} else {
-			echo "100";
+		// insert dữ liệu vào cơ sơ dữ liệu
+			$them_tb = "INSERT INTO loaithietbi (MA_LOAI_THIET_BI, TEN_LOAI_THIET_BI) VALUES ('$_POST[them_ma_tb]','$_POST[them_loai_tb]')";
+			if (mysqli_query($conn, $them_tb)) {
+				echo "99";
+			} else {
+				echo var_dump(mysqli_query($conn, $them_tb));
+			}
 		}
 	}
 }

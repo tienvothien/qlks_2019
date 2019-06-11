@@ -83,7 +83,7 @@ if (isset($_POST['id_chitietindex_phong'])) {
 				<th class='canhgiua'>CMND</th>
 				<th class='canhgiua canhgiua hidden'>HKTT</th>
 				<th class='canhgiua'>Điện thoại
-				<th class='canhgiua'>Chuyển</th>
+				<!-- <th class='canhgiua'>Chuyển</th> -->
 			</tr>
 		</thead>
 		<tbody>
@@ -115,7 +115,7 @@ if (isset($_POST['id_chitietindex_phong'])) {
 				<td class='canhgicanhgiuaua chuinhoa'>$row_khachhang[so_dien_thoai]</td>
 				";?>
 
-				<td class="canhgiua"><input type="button" name="edit" value="Chuyển" id="<?php echo $row_khachhang['idtp']; ?>" class="btn btn-success btn-xs id_sua_chuyenphong" /></td>
+				<!-- <td class="canhgiua"><input type="button" name="edit" value="Chuyển" id="<?php echo $row_khachhang['idtp']; ?>" class="btn btn-success btn-xs id_sua_chuyenphong" /></td> -->
 				
 				<?php echo "
 			</tr>

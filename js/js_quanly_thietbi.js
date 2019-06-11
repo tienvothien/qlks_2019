@@ -25,19 +25,26 @@ function themtb(){
             them_ma_tb:them_ma_tb,
             them_loai_tb:them_loai_tb
           },
-          success:function(data123){them_ma_tb
+          success:function(data123){
+            // alert(data123);
             if (data123==1) {
               $('#them_ma_tb').addClass('viendo');
               $('#them_ma_tb').removeClass('vienxanh');
               alert('Mã đã tồn tại');
             }else{
-              if (data123==99) {
-                alert("Thêm thiết bị thành công");
-               
-               location.reload();
-              }
+               if (data123==2) {
+                  $('#them_loai_tb').addClass('viendo');
+                  $('#them_loai_tb').removeClass('vienxanh');
+                  alert('Tên đã tồn tại');
+                }else{
+                  if (data123==99) {
+                    alert("Thêm thiết bị thành công");
+                   
+                   location.reload();
+                  }
             }         
           }
+        }
         });
         // kết thúc code thêm dữ liệu phòng
       }

@@ -13,8 +13,6 @@ include 'conn.php';
 				<th class='canhgiua' >STT</th>
 				<th class='canhgiua'>Phòng</th>
 				<th class='canhgiua'>Loại phòng</th>
-				<th class='canhgiua'>Giá Giờ <br> (VNĐ)</th>
-				<th class='canhgiua'>Giá ngày <br> (VNĐ)</th>
 				<th class='canhgiua'>Tổng số lần thuê</th>
 				<th class='canhgiua'>Chi tiết</th>
 				
@@ -33,8 +31,6 @@ include 'conn.php';
 				<td style='text-align:center;'>$stt</td>
 				<td class='chuinhoa canhgiua'>$row_phong[ma_phong]</td>
 				<td class='chuinthuong '> $r[ma_loai_phong] - $r[ten_loai_phong]</td>
-				<td class='chuinhoa canhgiua'>". number_format ($r["gia_phong_gio"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
-				<td class='chuinhoa canhgiua'>". number_format ($r["gia_phong_ngay"] , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 
 				<td class='chuinhoa canhgiua'>$tongsolanthue[tongsolanthue]</td>
 				";?>

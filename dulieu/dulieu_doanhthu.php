@@ -61,9 +61,9 @@ if (isset($_POST['tim_doanhthu_ngaybd'])) {
 			$stt++;
 			}
 			echo "
-			<tr>
+			<tr style='color:red;'>
 				<td class='canhgiua'>$stt</td>
-				<td class='canhgiua'>Tổng</td>
+				<td class='canhgiua' >Tổng</td>
 				<td class='canhgiua'>". number_format ($tongdoanhthu , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 				<td class='canhgiua'>". number_format ($tongthungay , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>
 				<td class='canhgiua'>". number_format ($tongphuthu , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>

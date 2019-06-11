@@ -153,6 +153,15 @@
 	                            </div>
 	                            </a>
 							</div>
+							<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+								<a href="quanly_thongtin_dangthue.php" title="">
+								<div class="thumbnail maune_vipdon" >
+	                               	<div class='caption text-center'>
+	                                    <?php  include './../dulieu/tong_so_khach_dang_thuê.php'?>
+	                                </div>
+	                            </div>
+	                            </a>
+							</div>
 						</div><!-- end thaydoi1 -->
 						</div><!-- end noidungthaydoi -->
 						</div> <!-- end col-9 -->

@@ -119,6 +119,18 @@
                             </select>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="sel1">Chọn số lượng loại thiết bị</label>
+                        <div class="col-sm-7">
+                            <select name="soluong_loai_tb" id="soluong_loai_tb" class="form-control" required="required">
+                                <option value="" id="soluong_loai_tb"></option>
+                                <?php for ($i=1; $i <11 ; $i++) { 
+                                   echo "<option value='$i'>$i</option>";
+                                } ?>                               
+                               
+                            </select>
+                        </div>
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-success  " onclick="themtbphong();">Thêm</button>
@@ -195,3 +207,4 @@
             </div>
         </div>
     </div>
+

@@ -45,25 +45,26 @@ $(document).ready(function(){
         }
       }
     });
-      // cập nhật lại thông tin thiết bị 
-// $(document).on('click', '.capnhattb2323', function(){
+      //cập nhật lại thông tin thiết bị 
+// $(document).on('click', '.suathietbitrongtungloaiphong', function(){
 //            var ma_thietbicapnhat = $(this).attr("id");
-//            $.ajax({
-//                 url:"./fetch.php",
-//                 method:"POST",
-//                 data:{ma_thietbicapnhat:ma_thietbicapnhat},
-//                 dataType:"json",
-//                 success:function(data){
-//                   // alert(data);
-//                     $('#ma_thietbicapnhat').val(data.MA_LOAI_THIET_BI);
-//                     $('#ten_ltpcapnhat').val(data.TEN_LOAI_THIET_BI);
-//                     $('#ma_tbsua1').val(data.MA_LOAI_THIET_BI);
+           
+           // $.ajax({
+           //      url:"./fetch.php",
+           //      method:"POST",
+           //      data:{ma_thietbicapnhat:ma_thietbicapnhat},
+           //      dataType:"json",
+           //      success:function(data){
+           //        // alert(data);
+           //          $('#ma_thietbicapnhat').val(data.MA_LOAI_THIET_BI);
+           //          $('#ten_ltpcapnhat').val(data.TEN_LOAI_THIET_BI);
+           //          $('#ma_tbsua1').val(data.MA_LOAI_THIET_BI);
                     
-//                     $('#insert').val("Cập nhật");
-//                     $('#thietbi_data_Modal').modal('show');
-//                 }
-//            });
-//       });
+           //          $('#insert').val("Cập nhật");
+           //          $('#thietbi_data_Modal').modal('show');
+           //      }
+           // });
+      // });
 
 
   });
@@ -155,16 +156,26 @@ $(document).ready(function(){
       }else{
         $('#ma_loai_tb').removeClass('viendo');
         $('#ma_loai_tb').addClass('vienxanh');
+      // kiem tra chưa chọn số lượng loại thiết bị
+      if ($('#soluong_loai_tb').val()=='') {
+        $('#soluong_loai_tb').removeClass('vienxanh');
+        $('#soluong_loai_tb').addClass('viendo');
+        alert('Chưa chọn số lượng loại thiết bị');
+      }else{
+        $('#soluong_loai_tb').removeClass('viendo');
+        $('#soluong_loai_tb').addClass('vienxanh');
         // nếu đủ dữ liệu tiến hành gọi hàm thêm phòng
         var ma_loai_phong= $('#ma_loai_phong').val()
         var ma_loai_tb= $('#ma_loai_tb').val()
+        var soluong_loai_tb= $('#soluong_loai_tb').val()
         $.ajax({
           url:"./../dulieu/add_thietbi_vao_loaiphong.php",
           method:"POST",
           data:{
             ma_loai_phong:ma_loai_phong,
-            ma_loai_tb:ma_loai_tb
-          },
+            ma_loai_tb:ma_loai_tb,
+            soluong_loai_tb:soluong_loai_tb
+             },
           success:function(data123){
             // alert(data123);
             if (data123==1) {
@@ -176,11 +187,13 @@ $(document).ready(function(){
                 alert("Thêm thiết bị thành công");
                 $('#ma_loai_phong').val();
                 $('#ma_loai_tb').val();
+                $('#soluong_loai_tb').val();
                  location.reload();
               }
             }         
           }
         });
+          }//số lượng
         // kết thúc code thêm dữ liệu phòng
       }
       // két thúc kiểm tra mã loại phòng

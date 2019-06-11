@@ -48,6 +48,8 @@
 						<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
 							<input type="button" class="btn btn-basic btn-block gia" name="them_loai_phong" value="Thêm mới" data-toggle="modal" data-target="#them_loai_phong1">
 						</div>
+						<br>
+						<br>
 						</div><!-- end thaydoi1 -->
 						</div><!-- end noidungthaydoi -->
 						</div> <!-- end col-9 -->

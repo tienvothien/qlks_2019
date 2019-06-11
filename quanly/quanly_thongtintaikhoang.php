@@ -45,9 +45,11 @@
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<div class="dulieu_nhanvien"><?php include './../dulieu/dulieu_tt_taikhoan.php'; ?></div>
 						</div>
-						<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+						<br>
+						<br>
+						<!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
 							<input type="button" class="btn btn-primary btn-block" name="them_nhan_vien" value="Thêm mới" data-toggle="modal" data-target="#them_nhan_vien1">
-						</div>
+						</div> -->
 						</div><!-- end thaydoi1 -->
 						</div><!-- end noidungthaydoi -->
 						</div> <!-- end col-9 -->
