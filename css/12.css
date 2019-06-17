@@ -339,7 +339,7 @@ h4.tenloaiphong {
     border: 1px solid;
 }
 .thumbnail.maune_12 {
-    background-color: #4ed8e9;
+    background-color: #44d0e1;
     /* color: red; */
     border: 1px solid;
 }
@@ -371,4 +371,8 @@ table.myTable {
 }
 input.suathietbitrongtungloaiphong {
     background-color: #3a3ab4;
+}
+.modal-body {
+    position: relative;
+    padding: 0px;
 }

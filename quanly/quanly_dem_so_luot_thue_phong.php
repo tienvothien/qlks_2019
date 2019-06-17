@@ -37,11 +37,12 @@
 					<div class="container-fluid" style="padding: 0px;">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 chutieude">
-								<h2>Đếm tổng số phòng được khách thuê</h2>
+								<h2>Tổng số lần phòng được thuê</h2>
 							</div>
 						</div>
 					<hr class="ngay_ad"></div>
 					<div class="container-fluid">
+						
 						<div class="row"><!-- nho doi ten class -->
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<div class="dulieu_dem_so_luot_thue_phong"><?php include './../dulieu/dulieu_dem_so_luot_thue_phong.php'; ?></div>

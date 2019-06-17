@@ -53,6 +53,7 @@
 									<input type="" name="" id="" class="form-control ngaytim1" value="đến" title="" style="width: 10%; border: none;">
 									<input type="date" name="tim_dathue_ngaykt" id="tim_dathue_ngaykt" class="form-control ngaytim1" value="" title="">
 								</div>
+								
 								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 									<select name="tim_dathue_id_phong" id="tim_dathue_id_phong" class="form-control" >
 										<option value="">Chọn phòng</option>
@@ -73,6 +74,7 @@
 									<button type="submit" name="tim_dathue_nut" class="btn btn-primary timkiem">Tìm</button>
 									
 								</div>
+								
 							</form>
 						</div>
 						<br>

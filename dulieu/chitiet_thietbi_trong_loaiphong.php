@@ -55,7 +55,7 @@ if (isset($_POST["ma_loai_phong"])) {
               <th>STT</th>
               <th>Thiết bị</th>
               <th>Số lượng</th>
-              <th>Sửa</th>
+              
               <th>Xóa</th>
            </tr>  ';
 
@@ -70,8 +70,7 @@ if (isset($_POST["ma_loai_phong"])) {
                      <td style=" text-transform: capitalize;">' . $row["SO_LUONG"] . '</td>
 
                      <td style=" text-transform: capitalize;">
-                     <input type="button"  class=" btn btn-danger suathietbitrongtungloaiphong" name="sua"  id="' . $row["id"] . '" value="Sửa">
-                     </td>
+                     
                      <td style=" text-transform: capitalize;">
                      <input type="button"  class="xoathietbitrongtungloaiphong btn btn-danger" name=""  id="' . $row["id"] . '" value="Xóa">
                      </td>

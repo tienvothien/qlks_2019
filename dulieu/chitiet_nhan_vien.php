@@ -60,7 +60,7 @@
 						<tr>
 							<th >Ngày thêm</th>
 							<td >' . date('d/m/Y', strtotime($row["ngaythem"])) . '</td>
-							<th>Cán bộ thêm</th>
+							<th>Người thêm</th>
 							<td class="chuinthuong">'.$canbothem['ho_nhan_vien'].'&nbsp;'.$canbothem['ten_nhan_vien'].'<br>'.$canbothem['ma_nhan_vien'].'</td>
 						</tr>
 			';

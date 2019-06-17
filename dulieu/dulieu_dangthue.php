@@ -82,7 +82,7 @@ if (isset($_POST['id_chitietindex_phong'])) {
 				<th class='canhgiua'>Giới tính</th>
 				<th class='canhgiua'>CMND</th>
 				<th class='canhgiua canhgiua hidden'>HKTT</th>
-				<th class='canhgiua'>Điện thoại
+				<th class='canhgiua'>Điện thoại</th>
 				<!-- <th class='canhgiua'>Chuyển</th> -->
 			</tr>
 		</thead>
