@@ -45,7 +45,7 @@ include 'conn.php';
 			$stt++;
 			}
 			echo "
-			<tr style='color:red;'>
+			<tr style='color:red; font-size: 20px;'>
 				<td class='canhgiua'>$stt</td>
 				<td class='canhgiua'>Tổng</td>
 				<td class='canhgiua'>". number_format ($tongdoanhthu , $decimals = 0 , $dec_point = "." , $thousands_sep = "," )."</td>

@@ -112,7 +112,7 @@ h2 {
 .sidenav a, .dropdown-btn {
   padding: 15px 8px 15px 16px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 19px;
   color: #000000;
   display: block;
   border: none;
@@ -240,7 +240,9 @@ button.btn.btn-primary.timkiem {
     font-size: 13px;
 }
 input.btn.btn-basic.btn-block {
-    background-color: #027bdb;
+    background-color: #098af1;
+    color: white;
+    font-size: 15px;
 }
 button.btn.btn-info.btn-lg.nutthemnek.themtb {
     width: 150px;
@@ -375,4 +377,13 @@ input.suathietbitrongtungloaiphong {
 .modal-body {
     position: relative;
     padding: 0px;
+}
+input.btn.btn-basic.btn-block {
+    background-color: #098af1;
+    color: white;
+    font-size: 15px;
+}
+button.xuat_excel12 {
+    width: 120px;
+    font-size: 15px;
 }

@@ -69,7 +69,7 @@ if (isset($_POST["ma_loai_phong"])) {
                      <td style=" text-transform: capitalize;">' . $row["TEN_LOAI_THIET_BI"] . '</td>
                      <td style=" text-transform: capitalize;">' . $row["SO_LUONG"] . '</td>
 
-                     <td style=" text-transform: capitalize;">
+                     
                      
                      <td style=" text-transform: capitalize;">
                      <input type="button"  class="xoathietbitrongtungloaiphong btn btn-danger" name=""  id="' . $row["id"] . '" value="Xóa">

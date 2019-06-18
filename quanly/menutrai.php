@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<a href="index.php" class="navbar-brand "><span class="fa fa-home"></span> Trang chủ</a>
+				<a href="index.php" class="navbar-brand "><span class="fa fa-home"></span><b> Trang chủ</b></a>
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse menutrai">
 				<div class="sidenav">
@@ -31,14 +31,14 @@
 					<?php if ($_SESSION['idnv']==2) {
 						
 					?>
-					<button class="dropdown-btn ">Quản lý nhân viên
+					<button class="dropdown-btn "><B>Quản lý nhân viên</B>
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
 						<a href="quanly_nhanvien.php" class="list-group-item">Thông tin nhân viên</a>
 					</div>
 					<?php } ?>
-					<button class="dropdown-btn ">Quản lý khách hàng
+					<button class="dropdown-btn "><b>Quản lý khách hàng</b>
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
@@ -46,7 +46,7 @@
 						<a href="quanly_thongtin_dathue.php" class="list-group-item">Quản lý khách đã thuê phòng</a>
 						<a href="quanly_thongtin_dangthue.php" class="list-group-item">Quản lý khách đang thuê phòng</a>
 					</div>
-					<button class="dropdown-btn ">Quản lý phòng
+					<button class="dropdown-btn "><b>Quản lý phòng</b>
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
@@ -55,21 +55,21 @@
 						<a href="quanly_thongtin_loai_phong.php" class="list-group-item">Quản lý loại phòng</a>
 						
 					</div>
-					<button class="dropdown-btn ">Quản lý thiết bị
+					<button class="dropdown-btn "><b>Quản lý thiết bị</b>
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
 						<a href="quanly_thietbi.php" class="list-group-item">Danh sách thiết bị</a>
 						<a href="quanly_thietbi_trong_loaiphong.php" class="list-group-item">Quản lý thiết bị trong từng loại phòng</a>
 					</div>
-					<button class="dropdown-btn ">Quản lý hóa đơn
+					<button class="dropdown-btn "><b>Quản lý hóa đơn</b>
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">
 						<a href="quanly_hoadon.php" class="list-group-item">Danh sách hóa đơn</a>
 					</div>
 					
-					<button class="dropdown-btn ">Thống kê
+					<button class="dropdown-btn "><b>Thống kê</b>
 					<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-container">

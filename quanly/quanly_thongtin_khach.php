@@ -69,7 +69,7 @@
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 						<div class="row">
 							<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-								<h4 class="modal-title">Thêm Khách hàng</h4>
+								<h4 class="modal-title"><b>Thêm khách hàng</b></h4>
 							</div>
 							
 						</div>
@@ -95,15 +95,15 @@
 									
 									$mnvmoi= $ma1+1;
 								?>
-								<input style="width:50%" type="text" name="ma_khach_hang_themmoi123" id="ma_khach_hang_themmoi123" class="form-control chuinhoa " value="<?php echo $mnvmoi ;?>"  required="" placeholder="Nhập mã Khách hàng"  readonly=""/>
+								<input style="width:50%" type="text" name="ma_khach_hang_themmoi123" id="ma_khach_hang_themmoi123" class="form-control chuinhoa " value="<?php echo $mnvmoi ;?>"  required="" placeholder="Nhập mã khách hàng"  readonly=""/>
 							</div>
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
 								<label>Họ Khách hàng</label>
-								<input  name="ho_khach_hangthemmoi_12" id="ho_khach_hangthemmoi_12" class="form-control chuinthuong" rows="1" required="" placeholder="Nhập họ Khách hàng" >
+								<input  name="ho_khach_hangthemmoi_12" id="ho_khach_hangthemmoi_12" class="form-control chuinthuong" rows="1" required="" placeholder="Nhập họ khách hàng" >
 							</div>
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
 								<label>Tên Khách hàng</label>
-								<input  name="ten_khach_hangthemmoi_12" id="ten_khach_hangthemmoi_12" class="form-control chuinthuong" rows="1" required="" placeholder="Nhập tên Khách hàng" >
+								<input  name="ten_khach_hangthemmoi_12" id="ten_khach_hangthemmoi_12" class="form-control chuinthuong" rows="1" required="" placeholder="Nhập tên khách hàng" >
 							</div>
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
 								<label>Ngày sinh</label>
@@ -205,7 +205,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Thông tin Khách hàng</h4>
+						<h4 class="modal-title"><b>Thông tin khách hàng</b></h4>
 					</div>
 					<div class="modal-body" id="thongtin_chitietkhach_hang">
 					</div>
@@ -221,7 +221,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Cập nhật thông tin Khách hàng</h4>
+						<h4 class="modal-title"><b>Cập nhật thông tin khách hàng</b></h4>
 					</div>
 					<div class="modal-body">
 						<form action="" id="from_suathongtin_khach_hang" name="from_suathongtin_khach_hang" 	method="POST" role="form" class="_1themphong1 " enctype="multipart/form-data" data-confirm="Bạn có chắn muốn cập nhật lại thông tin này?">
@@ -236,16 +236,16 @@
 								</div>
 							</div> -->
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hoten_cb_sua ">
-								<label>Mã Khách hàng</label>
+								<label>Mã khách hàng</label>
 								
 								<input style="width:50%" type="text" name="ma_khach_hang_sua_12" id="ma_khach_hang_sua_12" class="form-control chuinhoa " value=""  required="" readonly="" placeholder="Nhập mã Khách hàng"  />
 							</div>
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
-								<label>Họ Khách hàng</label>
+								<label>Họ khách hàng</label>
 								<input  name="ho_khach_hang_sua_12" id="ho_khach_hang_sua_12" class="form-control chuinthuong" rows="1" required="" placeholder="Nhập họ Khách hàng" >
 							</div>
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
-								<label>Tên Khách hàng</label>
+								<label>Tên khách hàng</label>
 								<input  name="ten_khach_hang_sua_12" id="ten_khach_hang_sua_12" class="form-control chuinthuong" rows="1" required="" placeholder="Nhập tên Khách hàng" >
 							</div>
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 hoten_cb_sua">
@@ -345,7 +345,7 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title canhgiua">Xóa Khách hàng</h4>
+							<h4 class="modal-title canhgiua">Xóa khách hàng</h4>
 						</div>
 						<div class="modal-body" id="thongtinnv_xoa12">
 						</div>

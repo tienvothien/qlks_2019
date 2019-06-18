@@ -46,9 +46,7 @@
 							<div class="dulieu_khachhang"><?php include './../dulieu/dulieu_dangthue.php'; ?></div>
 						<br>
 					</div>
-						<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-							<input type="button" class="btn btn-primary btn-block" name="them_khach_hang" value="Thêm mới" data-toggle="modal" data-target="#them_khach_hang1">
-						</div>
+						
 						<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
 
 							<form action="./../dulieu/xuat_excel.php" id="" method="POST" role="form">
